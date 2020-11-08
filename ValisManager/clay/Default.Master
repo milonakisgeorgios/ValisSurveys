@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="Default.master.cs" Inherits="ValisManager.clay.Default" %>
+<%@ Register src="controls/TopHeader.ascx" tagname="TopHeader" tagprefix="uc1" %>
+<%@ Register src="controls/CommonDialogs.ascx" tagname="CommonDialogs" tagprefix="uc2" %>
+<!DOCTYPE html>
+<html lang="el">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title><%=ValisManager.Globals.BrandName %></title>
+    <style type="text/css">
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+            border: 0 none;
+            font-family: inherit; font-size: 100%; font-style: inherit; font-weight: inherit;
+            margin: 0; outline: 0 none; padding: 0; vertical-align: baseline;
+        }
+        ol, ul { list-style: none outside none; }
+        table { border-collapse: separate; border-spacing: 0; }
+        caption, th, td { font-weight: normal; text-align: left; }
+        blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+        blockquote, q { quotes: "" ""; }
+        input[data-ime-mode-disabled] { ime-mode: disabled !important; }
+        input[type="file"] { ime-mode: disabled !important; }
+        html { overflow-y: scroll; }
+        body {
+            color: #000000;
+            background-color: #FFFFFF;
+            font-family: Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif;
+            font-size: 62.5%;
+            line-height: 1.2;
+        }
+        body, input, select, textarea, button { font-family: Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif; }
+        hr { display: none; }
+        strong { font-weight: bold; }
+        abbr, acronym { border: medium none; }
+        img { border: medium none; }
+        a { color: #006699; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        a:visited, #footer a:visited { color: #006699; }
+        a:focus { outline: thin dotted; }
+        a:active, a:hover { outline: 0 none; }
+        textarea { resize: none; }
+    </style>
+
+    <link href="/External/jquery-ui-1.11.2/smoothness/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/External/jquery.jqGrid-4.6.0/css/ui.jqgrid.css" rel="stylesheet" />
+    <link href="/content/default.css" rel="stylesheet" />
+    <noscript>
+	    <style type="text/css" media="all">form {display:none;}</style>
+	    <div style="padding: 50px 25%;">
+		    <div class="ErrorMessage">
+			    Javascript is required for this site to function, please enable.
+		    </div>
+	    </div>
+    </noscript>
+    <script src="/scripts/jquery-2.1.1.min.js"></script>
+    <script src="/scripts/jquery.cookie.js"></script>
+    <script src="/scripts/jquery.ui.touch-punch.min.js"></script>
+    <script src="/External/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+    <script src="/scripts/support.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="theForm" runat="server">
+        <div id="header" class="topzone">
+            <uc1:TopHeader ID="TopHeader1" runat="server" />
+        </div>
+        <div id="body">
+            <div class="wrapper hp-nus-wrapper">
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="MainContentHolder" runat="server">
+
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="wrapper">
+                <ul class="nav-footer">
+                    <li><a class="nav-link">link #1</a></li>
+                    <li><a class="nav-link">link #1</a></li>
+                    <li><a class="nav-link">link #1</a></li>
+                    <li><a class="nav-link">link #1</a></li>
+                </ul>
+                <p id="copyright" class="">
+                    <span><%: ValisManager.Globals.SystemPublicName %></span>
+                    <span>(by George Milonakis)</span>
+                    <em>© 2014-2015</em>
+                </p>
+                <ul class="nav-legal">
+                    <li><a href="">User Agreement</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                    <li><a href="">Copyright Policy</a></li>
+                    <li><a href="">Send Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <uc2:CommonDialogs ID="CommonDialogs1" runat="server" />
+</body>
+</html>

@@ -1,0 +1,200 @@
+﻿
+/*#region questions
+----------------------------------------------*/
+div.questions 
+{
+    
+}
+/*#endregion*/
+
+
+
+div.questionBox 
+{
+    margin: 16px 0px 16px 0px;
+}
+
+div.questionHeader
+{
+    font: bold medium/1.4 Arial,sans-serif;
+    background-color: #dfedff;
+	color:#000000;
+    padding: 4px 0px 4px 12px;
+}
+p.questionDescription
+{
+	font-size: 11px;
+	font-weight: normal;
+	color: #5d5d5d;
+}
+.requiredMarker { display: inline-block;float:left;text-align:center;font:bold 24px verdana;line-height:1.0;color:#000000;width:18px;}
+abbr.questionNumber {border-bottom: 0px;}
+
+
+
+div.questionControl 
+{
+    margin: 16px 0px 32px 26px;
+    font-size: .9em;
+    text-align: left;
+}
+
+div.singleline input[type=text]
+{
+	width: 260px;
+	padding: 2px;
+}
+
+div.multipleline textarea
+{
+	resize: none;
+}
+
+/*#region MatrixOnePerRowRenderer
+----------------------------------------------*/
+table.matrixoneperrow
+{
+    font-size: .8em;
+    font-weight: normal;
+    text-align: center;
+
+	border-collapse: collapse;
+	background-color: #efefef;
+}
+table.matrixoneperrow td.ColumnText
+{
+    width: 120px;
+}
+table.matrixoneperrow td.OptionText
+{
+    width: 220px;
+	text-align: left;
+	padding-top: 4px;
+}
+table.matrixoneperrow tr
+{
+	line-height: 1.8em;
+}
+table.matrixoneperrow tbody tr:nth-child(odd) {
+   background-color: #dedede;
+}
+/*#endregion*/
+
+
+/*#region MatrixManyPerRowRenderer
+----------------------------------------------*/
+table.matrixmanyperrow
+{
+    font-size: .8em;
+    font-weight: normal;
+    text-align: center;
+}
+table.matrixmanyperrow td.ColumnText
+{
+    width: 120px;
+}
+table.matrixmanyperrow td.OptionText
+{
+    width: 220px;
+	text-align: left;
+	padding-top: 4px;
+}
+/*#endregion*/
+
+
+
+
+/*#region ManyFromManyRenderer
+----------------------------------------------*/
+div.manyfrommany
+{
+
+}
+div.manyfrommany .mOption
+{
+    margin: 8px;
+    line-height: 1.2em;
+}
+div.manyfrommany .mOption input[type=checkbox]
+{
+    margin-right: 8px;
+}
+div.manyfrommany .OptionalInputBox input[type=text]
+{
+    margin-left: 6px;
+}
+/*#endregion*/
+
+
+
+/*#region OneFromManyRenderer
+----------------------------------------------*/
+div.onefrommany
+{
+
+}
+div.onefrommany .mOption
+{
+    margin: 8px;
+    line-height: 1.2em;
+}
+div.onefrommany .mOption input[type=radio]
+{
+    margin-right: 8px;
+}
+div.onefrommany .OptionalInputBox input[type=text]
+{
+    margin-left: 6px;
+}
+/*#endregion*/
+
+
+
+/*#region CompositeRenderer
+----------------------------------------------*/
+div.composite
+{
+
+}
+div.composite .mOption
+{
+    margin: 8px;
+    line-height: 1.2em;
+}
+div.composite label
+{
+    margin-right: 6px;
+}
+/*#endregion*/
+
+/*#region range
+----------------------------------------------*/
+
+div.range 
+{
+margin: 8px;
+}
+div.rangeline
+{
+    
+    line-height: 1.8em;
+}
+ div.rangeline span.frontLabel,  div.rangeline span.afterLabel
+{
+     width: 96px;
+    display: inline-block;
+}
+div.rangeline span.afterLabel {
+        text-align: left;
+        padding-left: 8px;
+}
+div.rangeline span.frontLabel {
+        text-align: right;
+        padding-right: 12px;
+}
+div.range div.mark {
+        width: 32px;
+        display: inline-block;
+        text-align: center;
+}
+/*#endregion*/

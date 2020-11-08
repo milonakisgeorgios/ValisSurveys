@@ -1,0 +1,53 @@
+﻿
+    
+    .QuestionChoices, .QuestionColumns
+    {
+        width: 500px;
+    }
+
+    div.OtherFieldWrapper
+    {
+        border: 1px dashed #b0bf5a;
+        margin-left: 18px;
+        border: 1px dashed #999999;
+        padding: 2px;
+        border-radius: 3px;
+        display: none;
+    }
+
+    div.ValidationWrapper
+    {
+        border: 1px dashed #999999;
+        padding: 4px;
+    }
+    div.ValidationWrapperHidden
+    {
+        padding: 4px;
+        margin: 4px 0px 3px 6px;
+    }
+    div.ValidationWrapperHidden input[type=text]
+    {
+        min-width: 98px;
+        width: 98px;
+        margin: 0px 12px 0px 4px;
+    }
+    div.ValidationWrapperHidden textarea
+    {
+        width: 468px;
+        height: 72px;
+    }
+    div.RangeClass
+    {
+        font-size: 0.88em;
+        margin-bottom: 8px;
+        display: none;
+    }
+    div.MessageClass 
+    {
+        display: none;
+    }
+    div.MessageClass label
+    {
+        font-size: 0.88em;
+        color: #000;
+    }

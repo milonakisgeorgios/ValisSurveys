@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/clay/Default.Master" AutoEventWireup="false" CodeBehind="CollectorDetails.master.cs" Inherits="ValisManager.clay.mysurveys.collectors.CollectorDetails" %>
+<%@ Register src="../../controls/CollectorNavigation.ascx" tagname="CollectorNavigation" tagprefix="uc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        
+        div.pageTitle {
+            background-image: url(/content/images/survey.png);
+            background-position: 0px 4px;
+            background-repeat: no-repeat;
+            padding-left: 36px;
+        }
+        td.leftColumn {
+            height: 100%;
+            background-color: #e8e8e8;
+            width: 200px;
+        }
+        td.rightColumn{
+            padding: 24px 20px 0px 20px;
+        }
+
+        
+        .secondPageTitle
+        {
+            color: #999999;
+            font-size: 1.6em;
+            padding-right: 12px;
+            margin: 0px 0px 22px 0px;
+            border-bottom: 1px solid #D6D6D6;
+        }
+
+        .rightButton
+        {
+            float: right;
+            margin-top: -14px;
+        }
+
+        
+        .form-paragraph-wrapper
+        {
+            margin: 0 0 30px 0;
+            padding: 0px;
+        }
+        .form-paragraph
+        {
+
+        }
+        .form-paragraph-title
+        {
+            color: #87A32E;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 6px;
+            padding: 0;
+        }
+        .form-paragraph-line
+        {
+            line-height: 1.4em;
+        }
+
+        .indent1
+        {
+            margin-left: 20px;
+        }
+
+
+        span.collectorstatus
+        {
+            display: block;
+            float: right;
+            margin-top: -4px;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: Arial, Verdana;
+        }
+        span.StatLabel
+        {
+            margin-right: 3px;
+            color: #6b6464;
+        }
+        span.StatNew
+        {
+            color: #ff9900;
+        }
+        span.StatOpen
+        {
+            color: #87a32e;
+        }
+        span.StatClosed
+        {
+            color: #ff0000;
+        }
+
+        
+        a.backToList
+        {
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #999999;
+            font-size: 12px;
+            padding: 4px 5px 4px 5px;
+            margin-right: 5px;
+            color: #222222;
+            background: url("/content/images/bg-grygrad.gif") repeat-x scroll 0 0 #777777;
+        }
+        
+        .hint 
+        {
+            color: #666666;
+            font-size: 11px;
+        }
+        .hintHeader 
+        {
+            font-size: 12px;
+        }
+    </style>
+    <script>
+
+        function OnCloseCollector(collectorId, textsLanguage)
+        {
+            $.ajax({
+                url: theManagerPath + 'services/api/Collectors/GetById?ScId=' + theAccessToken + '&collectorId=' + collectorId + '&textsLanguage=' + textsLanguage, dataType: 'json',
+                success: function (selectedCollector)
+                {
+                    if (selectedCollector.ScheduledMessages > 0)
+                    {
+                        showWarning('<div style="background-color: #c7c7c7; padding: 8px;"><p><b>Collector has scheduled messages.</b></p><br>This collector has pending or scheduled messages. You must cancel the delivery of these messages before you can close this collector.</div>', 'Block people from accessing your survey?');
+                    }
+                    else
+                    {
+                        //selectedCollector.Name
+                        var htmlMessage = '<div><p><b></b>Are you sure you want to stop collecting responses?</p><br/><span>Closing this collector will prevent anyone who is using this collector from entering responses and will interrupt any responses that are in progress.</span></div>';
+                        showQuestion(htmlMessage, function () {
+                            $.ajax({
+                                url: theManagerPath + 'services/api/Collectors/Close?ScId=' + theAccessToken + '&collectorId=' + collectorId, dataType: 'html',
+                                success: function (data) {
+                                    window.location = 'list.aspx?surveyId=<%=this.Surveyid %>';
+                                }
+                            }); }, 'Block people from accessing your survey?');
+                    }
+
+
+                }
+            });
+        }
+
+        function OnOpenCollector(collectorId, textsLanguage) {
+            $.ajax({
+                url: theManagerPath + 'services/api/Collectors/GetById?ScId=' + theAccessToken + '&collectorId=' + collectorId + '&textsLanguage=' + textsLanguage, dataType: 'json',
+                success: function (selectedCollector) {
+                    if (selectedCollector.ScheduledMessages > 0) {
+                        showWarning('<div style="background-color: #c7c7c7; padding: 8px;"><p><b>Collector has scheduled messages.</b></p><br>This collector has pending or scheduled messages. You must cancel the delivery of these messages before you can close this collector.</div>', 'Block people from accessing your survey?');
+                    }
+                    else {
+                        //selectedCollector.Name
+                        var htmlMessage = '<div><p><b></b>Are you sure you want to start collecting responses?</p></div>';
+                        showQuestion(htmlMessage, function () {
+                            $.ajax({
+                                url: theManagerPath + 'services/api/Collectors/Open?ScId=' + theAccessToken + '&collectorId=' + collectorId, dataType: 'html',
+                                success: function (data) {
+                                    window.location = 'list.aspx?surveyId=<%=this.Surveyid %>';
+                                }
+                            });
+                        }, 'Allow people to access your survey?');
+                        }
+
+
+                }
+            });
+        }
+
+
+        function OnManualwebLinkDataEntry(collectorId, textsLanguage)
+        {
+
+            window.open('<%=ManualSurveyRuntimeURL%>', '_blank');
+        }
+
+    </script>
+    <asp:ContentPlaceHolder ID="head2" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContentHolder" runat="server">
+    <div class="pageTitle">
+        <h1><a class='back-link' href='/clay/mysurveys/mysurveys.aspx'><%=this.Server.HtmlEncode(this.SelectedSurvey.Title) %></a></h1>
+    </div>
+    <div class="horizontal_separator2"></div>
+    <div class="pageSubTitle">
+        <%if(this.SelectedCollector.TextsLanguage != 0)
+          {
+              Response.Write(this.GetTextsLanguageThumbnail());
+          }%>
+        <h1><%=this.Server.HtmlEncode(this.SelectedCollector.Name) %></h1>
+        <%=StatusHtml %>
+    </div>
+    <table style="width: 100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td class="leftColumn">
+
+                    <uc1:CollectorNavigation ID="CollectorNavigation1" runat="server" />
+
+                </td>
+                <td class="rightColumn">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</asp:Content>

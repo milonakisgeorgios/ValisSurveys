@@ -1,0 +1,2125 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26A11622-9AB3-4B02-B5F0-6F67A4544BE5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ValisManager</RootNamespace>
+    <AssemblyName>ValisManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clay\addressbook\add.aspx" />
+    <Content Include="clay\addressbook\addressbook.aspx" />
+    <Content Include="clay\addressbook\contacts.aspx" />
+    <Content Include="clay\addressbook\export.aspx" />
+    <Content Include="clay\addressbook\remove.aspx" />
+    <Content Include="clay\controls\balanceStatistics.ascx" />
+    <Content Include="clay\controls\CollectorNavigation.ascx" />
+    <Content Include="clay\controls\CommonDialogs.ascx" />
+    <Content Include="clay\controls\EditSurveyTabs.ascx" />
+    <Content Include="clay\controls\TopHeader.ascx" />
+    <Content Include="clay\fileman\css\images\animated-overlay.gif" />
+    <Content Include="clay\fileman\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="clay\fileman\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="clay\fileman\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="clay\fileman\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="clay\fileman\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="clay\fileman\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="clay\fileman\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="clay\fileman\css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="clay\fileman\css\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="clay\fileman\css\main.css" />
+    <Content Include="clay\fileman\css\main.min.css" />
+    <Content Include="clay\fileman\surveyFiles.html" />
+    <Content Include="clay\fileman\images\action-folder-paste.png" />
+    <Content Include="clay\fileman\images\action-folder-rename.png" />
+    <Content Include="clay\fileman\images\arrow_down.png" />
+    <Content Include="clay\fileman\images\arrow_up.png" />
+    <Content Include="clay\fileman\images\blank.gif" />
+    <Content Include="clay\fileman\images\copy.png" />
+    <Content Include="clay\fileman\images\cut.png" />
+    <Content Include="clay\fileman\images\dir-minus.png" />
+    <Content Include="clay\fileman\images\dir-plus.png" />
+    <Content Include="clay\fileman\images\file-add.png" />
+    <Content Include="clay\fileman\images\file-delete.png" />
+    <Content Include="clay\fileman\images\file-download.png" />
+    <Content Include="clay\fileman\images\file-duplicate.png" />
+    <Content Include="clay\fileman\images\file-upload.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_3gp.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_7z.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ace.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ai.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_aif.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_aiff.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_amr.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_asf.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_asx.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_bat.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_bin.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_bmp.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_bup.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_cab.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_cbr.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_cda.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_cdl.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_cdr.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_chm.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_dat.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_divx.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_dll.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_dmg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_doc.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_dss.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_dvf.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_dwg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_eml.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_eps.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_exe.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_fla.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_flv.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_gif.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_gz.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_hqx.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_htm.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_html.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ifo.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_indd.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_iso.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_jar.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_jpeg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_jpg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_lnk.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_log.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_m4a.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_m4b.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_m4p.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_m4v.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mcd.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mdb.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mid.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mov.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mp2.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mp4.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mpeg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mpg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_msi.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_mswmm.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ogg.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_pdf.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_png.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_pps.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ps.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_psd.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_pst.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ptb.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_pub.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_qbb.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_qbw.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_qxd.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ram.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_rar.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_rm.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_rmvb.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_rtf.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_sea.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ses.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_sit.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_sitx.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ss.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_swf.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_tgz.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_thm.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_tif.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_tmp.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_torrent.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_ttf.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_txt.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_vcd.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_vob.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_wav.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_wma.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_wmv.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_wps.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_xls.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_xpi.png" />
+    <Content Include="clay\fileman\images\filetypes\big\file_extension_zip.png" />
+    <Content Include="clay\fileman\images\filetypes\big\unknown.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_3gp.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_7z.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ace.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ai.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_aif.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_aiff.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_amr.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_asf.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_asx.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_bat.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_bin.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_bmp.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_bup.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_cab.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_cbr.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_cda.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_cdl.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_cdr.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_chm.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_dat.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_divx.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_dll.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_dmg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_doc.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_dss.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_dvf.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_dwg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_eml.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_eps.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_exe.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_fla.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_flv.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_gif.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_gz.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_hqx.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_htm.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_html.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ifo.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_indd.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_iso.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_jar.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_jpeg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_jpg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_lnk.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_log.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_m4a.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_m4b.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_m4p.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_m4v.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mcd.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mdb.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mid.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mov.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mp2.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mp4.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mpeg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mpg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_msi.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_mswmm.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ogg.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_pdf.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_png.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_pps.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ps.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_psd.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_pst.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ptb.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_pub.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_qbb.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_qbw.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_qxd.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ram.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_rar.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_rm.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_rmvb.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_rtf.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_sea.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ses.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_sit.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_sitx.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ss.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_swf.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_tgz.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_thm.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_tif.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_tmp.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_torrent.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_ttf.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_txt.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_vcd.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_vob.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_wav.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_wma.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_wmv.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_wps.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_xls.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_xpi.png" />
+    <Content Include="clay\fileman\images\filetypes\file_extension_zip.png" />
+    <Content Include="clay\fileman\images\filetypes\unknown.png" />
+    <Content Include="clay\fileman\images\find.png" />
+    <Content Include="clay\fileman\images\folder-add.png" />
+    <Content Include="clay\fileman\images\folder-delete.png" />
+    <Content Include="clay\fileman\images\folder-download.png" />
+    <Content Include="clay\fileman\images\folder-green.png" />
+    <Content Include="clay\fileman\images\folder-opened.png" />
+    <Content Include="clay\fileman\images\folder.png" />
+    <Content Include="clay\fileman\images\loading-dir.gif" />
+    <Content Include="clay\fileman\images\loading.gif" />
+    <Content Include="clay\fileman\images\paste.png" />
+    <Content Include="clay\fileman\images\preview.png" />
+    <Content Include="clay\fileman\images\rename.png" />
+    <Content Include="clay\fileman\images\search.png" />
+    <Content Include="clay\fileman\images\select.png" />
+    <Content Include="clay\fileman\images\upload-big.png" />
+    <Content Include="clay\fileman\images\view-list.png" />
+    <Content Include="clay\fileman\images\view-tile.png" />
+    <Content Include="clay\fileman\js\custom.js" />
+    <Content Include="clay\fileman\js\directory.js" />
+    <Content Include="clay\fileman\js\file.js" />
+    <Content Include="clay\fileman\js\filetypes.js" />
+    <Content Include="clay\fileman\js\jquery-1.10.2.min.js" />
+    <Content Include="clay\fileman\js\jquery-dateFormat.min.js" />
+    <Content Include="clay\fileman\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="clay\fileman\js\main.js" />
+    <Content Include="clay\fileman\js\main.min.js" />
+    <Content Include="clay\fileman\js\mini-main.js" />
+    <Content Include="clay\fileman\js\utils.js" />
+    <Content Include="clay\home.aspx" />
+    <Content Include="clay\login\login.aspx" />
+    <Content Include="clay\myaccount.aspx" />
+    <Content Include="clay\mysurveys\analysis\controls\analysisTabs.ascx" />
+    <Content Include="clay\mysurveys\analysis\controls\analysisToolBox.ascx" />
+    <Content Include="clay\mysurveys\analysis\report.aspx" />
+    <Content Include="clay\mysurveys\analysis\report.css" />
+    <Content Include="clay\mysurveys\analysis\report.js" />
+    <Content Include="clay\mysurveys\analysis\responses.aspx" />
+    <Content Include="clay\mysurveys\analysis\summary.aspx" />
+    <Content Include="clay\mysurveys\analysis\summary.css" />
+    <Content Include="clay\mysurveys\analysis\summary.js" />
+    <Content Include="clay\mysurveys\collectors\addCollector.aspx" />
+    <Content Include="clay\mysurveys\collectors\charges.aspx" />
+    <Content Include="clay\mysurveys\collectors\chargesAdd.aspx" />
+    <Content Include="clay\mysurveys\collectors\chargesEdit.aspx" />
+    <Content Include="clay\mysurveys\collectors\configuration-website.aspx" />
+    <Content Include="clay\mysurveys\collectors\dataentry.aspx" />
+    <Content Include="clay\mysurveys\collectors\details-email.aspx" />
+    <Content Include="clay\mysurveys\collectors\details-weblink.aspx" />
+    <Content Include="clay\mysurveys\collectors\details-website.aspx" />
+    <Content Include="clay\mysurveys\collectors\editMessage_content.aspx" />
+    <Content Include="clay\mysurveys\collectors\editMessage_recipients.aspx" />
+    <Content Include="clay\mysurveys\collectors\editMessage_schedule.aspx" />
+    <Content Include="clay\mysurveys\collectors\list.aspx" />
+    <Content Include="clay\mysurveys\collectors\messages.aspx" />
+    <Content Include="clay\mysurveys\collectors\message_preview.aspx" />
+    <Content Include="clay\mysurveys\collectors\overview.aspx" />
+    <Content Include="clay\mysurveys\collectors\recipients.aspx" />
+    <Content Include="clay\mysurveys\collectors\recipientsAdd.aspx" />
+    <Content Include="clay\mysurveys\collectors\recipientsDownload.aspx" />
+    <Content Include="clay\mysurveys\collectors\recipientsRemove.aspx" />
+    <Content Include="clay\mysurveys\collectors\restrictions.aspx" />
+    <Content Include="clay\mysurveys\collectors\settings.aspx" />
+    <Content Include="clay\mysurveys\Design_Survey.aspx" />
+    <Content Include="clay\mysurveys\Edit_Survey.aspx" />
+    <Content Include="clay\mysurveys\mysurveys.aspx" />
+    <Content Include="clay\mysurveys\New_Survey.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\DescriptiveTextHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\questionhelpers.js" />
+    <Content Include="clay\mysurveys\QuestionHelpers\RangeHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\TODO\CompositeHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\DateHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\DateTimeHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\DecimalHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\DropDownHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\IntegerHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\ManyFromManyHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\TODO\MatrixManyPerRowCustomHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\MatrixManyPerRowHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\MatrixOnePerRowHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\MultipleLineHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\OneFromManyHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\questionhelpers.css" />
+    <Content Include="clay\mysurveys\QuestionHelpers\SingleLineHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\TODO\SliderHelper.aspx" />
+    <Content Include="clay\mysurveys\QuestionHelpers\TODO\TimeHelper.aspx" />
+    <Content Include="clay\payments\mycharges.aspx" />
+    <Content Include="clay\payments\mypayments.aspx" />
+    <Content Include="clay\textedit\adapters\jquery.js" />
+    <Content Include="clay\textedit\build-config.js" />
+    <Content Include="clay\textedit\ckeditor.js" />
+    <Content Include="clay\textedit\config.js" />
+    <Content Include="clay\textedit\contents.css" />
+    <Content Include="clay\textedit\lang\af.js" />
+    <Content Include="clay\textedit\lang\ar.js" />
+    <Content Include="clay\textedit\lang\bg.js" />
+    <Content Include="clay\textedit\lang\bn.js" />
+    <Content Include="clay\textedit\lang\bs.js" />
+    <Content Include="clay\textedit\lang\ca.js" />
+    <Content Include="clay\textedit\lang\cs.js" />
+    <Content Include="clay\textedit\lang\cy.js" />
+    <Content Include="clay\textedit\lang\da.js" />
+    <Content Include="clay\textedit\lang\de.js" />
+    <Content Include="clay\textedit\lang\el.js" />
+    <Content Include="clay\textedit\lang\en-au.js" />
+    <Content Include="clay\textedit\lang\en-ca.js" />
+    <Content Include="clay\textedit\lang\en-gb.js" />
+    <Content Include="clay\textedit\lang\en.js" />
+    <Content Include="clay\textedit\lang\eo.js" />
+    <Content Include="clay\textedit\lang\es.js" />
+    <Content Include="clay\textedit\lang\et.js" />
+    <Content Include="clay\textedit\lang\eu.js" />
+    <Content Include="clay\textedit\lang\fa.js" />
+    <Content Include="clay\textedit\lang\fi.js" />
+    <Content Include="clay\textedit\lang\fo.js" />
+    <Content Include="clay\textedit\lang\fr-ca.js" />
+    <Content Include="clay\textedit\lang\fr.js" />
+    <Content Include="clay\textedit\lang\gl.js" />
+    <Content Include="clay\textedit\lang\gu.js" />
+    <Content Include="clay\textedit\lang\he.js" />
+    <Content Include="clay\textedit\lang\hi.js" />
+    <Content Include="clay\textedit\lang\hr.js" />
+    <Content Include="clay\textedit\lang\hu.js" />
+    <Content Include="clay\textedit\lang\id.js" />
+    <Content Include="clay\textedit\lang\is.js" />
+    <Content Include="clay\textedit\lang\it.js" />
+    <Content Include="clay\textedit\lang\ja.js" />
+    <Content Include="clay\textedit\lang\ka.js" />
+    <Content Include="clay\textedit\lang\km.js" />
+    <Content Include="clay\textedit\lang\ko.js" />
+    <Content Include="clay\textedit\lang\ku.js" />
+    <Content Include="clay\textedit\lang\lt.js" />
+    <Content Include="clay\textedit\lang\lv.js" />
+    <Content Include="clay\textedit\lang\mk.js" />
+    <Content Include="clay\textedit\lang\mn.js" />
+    <Content Include="clay\textedit\lang\ms.js" />
+    <Content Include="clay\textedit\lang\nb.js" />
+    <Content Include="clay\textedit\lang\nl.js" />
+    <Content Include="clay\textedit\lang\no.js" />
+    <Content Include="clay\textedit\lang\pl.js" />
+    <Content Include="clay\textedit\lang\pt-br.js" />
+    <Content Include="clay\textedit\lang\pt.js" />
+    <Content Include="clay\textedit\lang\ro.js" />
+    <Content Include="clay\textedit\lang\ru.js" />
+    <Content Include="clay\textedit\lang\si.js" />
+    <Content Include="clay\textedit\lang\sk.js" />
+    <Content Include="clay\textedit\lang\sl.js" />
+    <Content Include="clay\textedit\lang\sq.js" />
+    <Content Include="clay\textedit\lang\sr-latn.js" />
+    <Content Include="clay\textedit\lang\sr.js" />
+    <Content Include="clay\textedit\lang\sv.js" />
+    <Content Include="clay\textedit\lang\th.js" />
+    <Content Include="clay\textedit\lang\tr.js" />
+    <Content Include="clay\textedit\lang\ug.js" />
+    <Content Include="clay\textedit\lang\uk.js" />
+    <Content Include="clay\textedit\lang\vi.js" />
+    <Content Include="clay\textedit\lang\zh-cn.js" />
+    <Content Include="clay\textedit\lang\zh.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="clay\textedit\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="clay\textedit\plugins\about\dialogs\about.js" />
+    <Content Include="clay\textedit\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="clay\textedit\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="clay\textedit\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="clay\textedit\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="clay\textedit\plugins\dialog\dialogDefinition.js" />
+    <Content Include="clay\textedit\plugins\div\dialogs\div.js" />
+    <Content Include="clay\textedit\plugins\fakeobjects\images\spacer.gif" />
+    <Content Include="clay\textedit\plugins\filebrowser\plugin.js" />
+    <Content Include="clay\textedit\plugins\find\dialogs\find.js" />
+    <Content Include="clay\textedit\plugins\flash\dialogs\flash.js" />
+    <Content Include="clay\textedit\plugins\flash\images\placeholder.png" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\button.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\form.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\radio.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\select.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\textarea.js" />
+    <Content Include="clay\textedit\plugins\forms\dialogs\textfield.js" />
+    <Content Include="clay\textedit\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="clay\textedit\plugins\icons.png" />
+    <Content Include="clay\textedit\plugins\icons_hidpi.png" />
+    <Content Include="clay\textedit\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="clay\textedit\plugins\iframe\images\placeholder.png" />
+    <Content Include="clay\textedit\plugins\image\dialogs\image.js" />
+    <Content Include="clay\textedit\plugins\image\images\noimage.png" />
+    <Content Include="clay\textedit\plugins\link\dialogs\anchor.js" />
+    <Content Include="clay\textedit\plugins\link\dialogs\link.js" />
+    <Content Include="clay\textedit\plugins\link\images\anchor.png" />
+    <Content Include="clay\textedit\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="clay\textedit\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="clay\textedit\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="clay\textedit\plugins\magicline\images\icon.png" />
+    <Content Include="clay\textedit\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="clay\textedit\plugins\pastefromword\filter\default.js" />
+    <Content Include="clay\textedit\plugins\popup\plugin.js" />
+    <Content Include="clay\textedit\plugins\preview\preview.html" />
+    <Content Include="clay\textedit\plugins\scayt\dialogs\options.js" />
+    <Content Include="clay\textedit\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_address.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_div.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_h1.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_h2.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_h3.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_h4.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_h5.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_h6.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_p.png" />
+    <Content Include="clay\textedit\plugins\showblocks\images\block_pre.png" />
+    <Content Include="clay\textedit\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="clay\textedit\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\angel_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\angry_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\broken_heart.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\confused_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\cry_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\devil_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\envelope.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\envelope.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\heart.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\heart.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\kiss.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\kiss.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\lightbulb.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\omg_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\regular_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\sad_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\shades_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="clay\textedit\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="clay\textedit\plugins\smiley\images\wink_smile.png" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="clay\textedit\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="clay\textedit\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="clay\textedit\plugins\table\dialogs\table.js" />
+    <Content Include="clay\textedit\plugins\templates\dialogs\templates.css" />
+    <Content Include="clay\textedit\plugins\templates\dialogs\templates.js" />
+    <Content Include="clay\textedit\plugins\templates\templates\default.js" />
+    <Content Include="clay\textedit\plugins\templates\templates\images\template1.gif" />
+    <Content Include="clay\textedit\plugins\templates\templates\images\template2.gif" />
+    <Content Include="clay\textedit\plugins\templates\templates\images\template3.gif" />
+    <Content Include="clay\textedit\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="clay\textedit\plugins\wsc\dialogs\tmp.html" />
+    <Content Include="clay\textedit\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="clay\textedit\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="clay\textedit\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="clay\textedit\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="clay\textedit\skins\moono\dialog.css" />
+    <Content Include="clay\textedit\skins\moono\dialog_ie.css" />
+    <Content Include="clay\textedit\skins\moono\dialog_ie7.css" />
+    <Content Include="clay\textedit\skins\moono\dialog_ie8.css" />
+    <Content Include="clay\textedit\skins\moono\dialog_iequirks.css" />
+    <Content Include="clay\textedit\skins\moono\dialog_opera.css" />
+    <Content Include="clay\textedit\skins\moono\editor.css" />
+    <Content Include="clay\textedit\skins\moono\editor_gecko.css" />
+    <Content Include="clay\textedit\skins\moono\editor_ie.css" />
+    <Content Include="clay\textedit\skins\moono\editor_ie7.css" />
+    <Content Include="clay\textedit\skins\moono\editor_ie8.css" />
+    <Content Include="clay\textedit\skins\moono\editor_iequirks.css" />
+    <Content Include="clay\textedit\skins\moono\icons.png" />
+    <Content Include="clay\textedit\skins\moono\icons_hidpi.png" />
+    <Content Include="clay\textedit\skins\moono\images\arrow.png" />
+    <Content Include="clay\textedit\skins\moono\images\close.png" />
+    <Content Include="clay\textedit\skins\moono\images\hidpi\close.png" />
+    <Content Include="clay\textedit\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="clay\textedit\skins\moono\images\hidpi\lock.png" />
+    <Content Include="clay\textedit\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="clay\textedit\skins\moono\images\lock-open.png" />
+    <Content Include="clay\textedit\skins\moono\images\lock.png" />
+    <Content Include="clay\textedit\skins\moono\images\refresh.png" />
+    <Content Include="clay\textedit\skins\silver-master\colorpanel.css" />
+    <Content Include="clay\textedit\skins\silver-master\dialog.css" />
+    <Content Include="clay\textedit\skins\silver-master\dialog_ie.css" />
+    <Content Include="clay\textedit\skins\silver-master\dialog_ie7.css" />
+    <Content Include="clay\textedit\skins\silver-master\dialog_ie8.css" />
+    <Content Include="clay\textedit\skins\silver-master\dialog_iequirks.css" />
+    <Content Include="clay\textedit\skins\silver-master\dialog_opera.css" />
+    <Content Include="clay\textedit\skins\silver-master\editor.css" />
+    <Content Include="clay\textedit\skins\silver-master\editor_ie.css" />
+    <Content Include="clay\textedit\skins\silver-master\editor_ie7.css" />
+    <Content Include="clay\textedit\skins\silver-master\editor_ie8.css" />
+    <Content Include="clay\textedit\skins\silver-master\editor_iequirks.css" />
+    <Content Include="clay\textedit\skins\silver-master\elementspath.css" />
+    <Content Include="clay\textedit\skins\silver-master\icons\about.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\anchor-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\anchor.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\bgcolor.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\bidiltr.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\bidirtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\blockquote.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\bold.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\bulletedlist-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\bulletedlist.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\button.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\checkbox.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\copy-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\copy.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\creatediv.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\cut-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\cut.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\docprops-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\docprops.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\find-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\find.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\flash.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\form.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\hiddenfield.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\horizontalrule.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\icons.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\iframe.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\image.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\imagebutton.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\indent-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\indent.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\italic.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\justifyblock.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\justifycenter.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\justifyleft.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\justifyright.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\link.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\maximize.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\newpage-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\newpage.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\numberedlist-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\numberedlist.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\outdent-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\outdent.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\pagebreak-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\pagebreak.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\paste-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\paste.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\pastefromword-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\pastefromword.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\pastetext-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\pastetext.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\preview-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\preview.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\print.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\radio.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\redo-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\redo.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\removeformat.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\replace.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\save.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\scayt.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\select-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\select.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\selectall.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\showblocks-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\showblocks.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\smiley.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\source-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\source.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\specialchar.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\spellchecker.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\strike.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\subscript.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\superscript.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\table.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\templates-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\templates.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\textarea-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\textarea.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\textcolor.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\textfield.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\underline.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\undo-rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\undo.png" />
+    <Content Include="clay\textedit\skins\silver-master\icons\unlink.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\custom\comboBg.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\custom\comboBgHover.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\custom\resizer.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\custom\toolBg.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\custom\toolBgStriped.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\custom\toolEnd.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\dialog_sides.gif" />
+    <Content Include="clay\textedit\skins\silver-master\images\dialog_sides.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\dialog_sides_rtl.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\mini.gif" />
+    <Content Include="clay\textedit\skins\silver-master\images\sprites.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\sprites_ie6.png" />
+    <Content Include="clay\textedit\skins\silver-master\images\toolbar_start.gif" />
+    <Content Include="clay\textedit\skins\silver-master\mainui.css" />
+    <Content Include="clay\textedit\skins\silver-master\menu.css" />
+    <Content Include="clay\textedit\skins\silver-master\panel.css" />
+    <Content Include="clay\textedit\skins\silver-master\presets.css" />
+    <Content Include="clay\textedit\skins\silver-master\preview\preview.png" />
+    <Content Include="clay\textedit\skins\silver-master\preview\uicolor.png" />
+    <Content Include="clay\textedit\skins\silver-master\reset.css" />
+    <Content Include="clay\textedit\skins\silver-master\richcombo.css" />
+    <Content Include="clay\textedit\skins\silver-master\skin.js" />
+    <Content Include="clay\textedit\skins\silver-master\toolbar.css" />
+    <Content Include="clay\textedit\styles.js" />
+    <Content Include="clay\verify.aspx" />
+    <Content Include="commands\recipient\remove.aspx" />
+    <Content Include="content\default.css" />
+    <Content Include="content\flags\flag0000.gif" />
+    <Content Include="content\flags\flag0402.gif" />
+    <Content Include="content\flags\flag0403.gif" />
+    <Content Include="content\flags\flag0404.gif" />
+    <Content Include="content\flags\flag0405.gif" />
+    <Content Include="content\flags\flag0406.gif" />
+    <Content Include="content\flags\flag0407.gif" />
+    <Content Include="content\flags\flag0408.gif" />
+    <Content Include="content\flags\flag040b.gif" />
+    <Content Include="content\flags\flag040c.gif" />
+    <Content Include="content\flags\flag040d.gif" />
+    <Content Include="content\flags\flag040e.gif" />
+    <Content Include="content\flags\flag040f.gif" />
+    <Content Include="content\flags\flag0410.gif" />
+    <Content Include="content\flags\flag0411.gif" />
+    <Content Include="content\flags\flag0412.gif" />
+    <Content Include="content\flags\flag0413.gif" />
+    <Content Include="content\flags\flag0414.gif" />
+    <Content Include="content\flags\flag0415.gif" />
+    <Content Include="content\flags\flag0418.gif" />
+    <Content Include="content\flags\flag0419.gif" />
+    <Content Include="content\flags\flag041a.gif" />
+    <Content Include="content\flags\flag041b.gif" />
+    <Content Include="content\flags\flag041c.gif" />
+    <Content Include="content\flags\flag041d.gif" />
+    <Content Include="content\flags\flag041f.gif" />
+    <Content Include="content\flags\flag0421.gif" />
+    <Content Include="content\flags\flag0423.gif" />
+    <Content Include="content\flags\flag0425.gif" />
+    <Content Include="content\flags\flag0426.gif" />
+    <Content Include="content\flags\flag0427.gif" />
+    <Content Include="content\flags\flag042d.gif" />
+    <Content Include="content\flags\flag0437.gif" />
+    <Content Include="content\flags\flag043e.gif" />
+    <Content Include="content\flags\flag046e.gif" />
+    <Content Include="content\flags\flag0804.gif" />
+    <Content Include="content\flags\flag0809.gif" />
+    <Content Include="content\flags\flag0816.gif" />
+    <Content Include="content\flags\flag200a.gif" />
+    <Content Include="content\flags\flag9999.png" />
+    <Content Include="content\images\branch-page-icon.png" />
+    <Content Include="content\images\arrow_hover.png" />
+    <Content Include="content\images\arrow_up.png" />
+    <Content Include="content\images\Background.jpg" />
+    <Content Include="content\images\bars-chart-16.png" />
+    <Content Include="content\images\bars-chart-24.png" />
+    <Content Include="content\images\bg-grygrad.gif" />
+    <Content Include="content\images\branch-question-icon.png" />
+    <Content Include="content\images\btnMain.gif" />
+    <Content Include="content\images\btnMain2.gif" />
+    <Content Include="content\images\btnMain2a.gif" />
+    <Content Include="content\images\btnMain3.gif" />
+    <Content Include="content\images\btnMain3b.gif" />
+    <Content Include="content\images\btnMain4.gif" />
+    <Content Include="content\images\btnMain4b.gif" />
+    <Content Include="content\images\chart.png" />
+    <Content Include="content\images\chk_green.gif" />
+    <Content Include="content\images\chk_off.gif" />
+    <Content Include="content\images\chk_red.gif" />
+    <Content Include="content\images\close-filter.png" />
+    <Content Include="content\images\coins.png" />
+    <Content Include="content\images\collectors.png" />
+    <Content Include="content\images\collectors28.png" />
+    <Content Include="content\images\collectors32.png" />
+    <Content Include="content\images\collectorsgray.png" />
+    <Content Include="content\images\column-chart-16.png" />
+    <Content Include="content\images\column-chart-24.png" />
+    <Content Include="content\images\contacts.png" />
+    <Content Include="content\images\datatable-16.png" />
+    <Content Include="content\images\datepicker-20.png" />
+    <Content Include="content\images\datepicker-24.png" />
+    <Content Include="content\images\datepicker-32.png" />
+    <Content Include="content\images\datepicker-48.png" />
+    <Content Include="content\images\datepicker_small_20.gif" />
+    <Content Include="content\images\delete-red.png" />
+    <Content Include="content\images\deleteDialogHeader.png" />
+    <Content Include="content\images\deletegray.gif" />
+    <Content Include="content\images\deleteGrayIcon.gif" />
+    <Content Include="content\images\deleteitem.gif" />
+    <Content Include="content\images\deleteitemred.gif" />
+    <Content Include="content\images\DeleteRed16.png" />
+    <Content Include="content\images\DeleteRed24.png" />
+    <Content Include="content\images\deleteRedIcon.png" />
+    <Content Include="content\images\design.png" />
+    <Content Include="content\images\dim.png" />
+    <Content Include="content\images\dim2.png" />
+    <Content Include="content\images\edititem.gif" />
+    <Content Include="content\images\edititem2.gif" />
+    <Content Include="content\images\edititemoff.gif" />
+    <Content Include="content\images\email_off.gif" />
+    <Content Include="content\images\email_sent.gif" />
+    <Content Include="content\images\error16.gif" />
+    <Content Include="content\images\errorDialogHeader.png" />
+    <Content Include="content\images\global-dialog-titlebar.gif" />
+    <Content Include="content\images\gradient.png" />
+    <Content Include="content\images\green-bullet.png" />
+    <Content Include="content\images\HideZeroResponseOptions-16.png" />
+    <Content Include="content\images\infoDialogHeader.png" />
+    <Content Include="content\images\information16.gif" />
+    <Content Include="content\images\isActive.gif" />
+    <Content Include="content\images\isBuiltin.gif" />
+    <Content Include="content\images\isOn.gif" />
+    <Content Include="content\images\isOnRed.gif" />
+    <Content Include="content\images\logo.png" />
+    <Content Include="content\images\orange-bullet.png" />
+    <Content Include="content\images\percent-16.png" />
+    <Content Include="content\images\person.png" />
+    <Content Include="content\images\pie-16.png" />
+    <Content Include="content\images\pie-24.png" />
+    <Content Include="content\images\preview.png" />
+    <Content Include="content\images\progress_bar.gif" />
+    <Content Include="content\images\question-settings.png" />
+    <Content Include="content\images\questionDialogHeader.png" />
+    <Content Include="content\images\questionIcon18.png" />
+    <Content Include="content\images\readonly.png" />
+    <Content Include="content\images\red-bullet.png" />
+    <Content Include="content\images\requiredIcon1.gif" />
+    <Content Include="content\images\resp_full.gif" />
+    <Content Include="content\images\resp_no.gif" />
+    <Content Include="content\images\resp_part.gif" />
+    <Content Include="content\images\results-gray.png" />
+    <Content Include="content\images\results.png" />
+    <Content Include="content\images\RSReport_32xLG.png" />
+    <Content Include="content\images\survey.png" />
+    <Content Include="content\images\surveys.png" />
+    <Content Include="content\images\target-page-icon.png" />
+    <Content Include="content\images\tile.gif" />
+    <Content Include="content\images\tile2.gif" />
+    <Content Include="content\images\Translatable.png" />
+    <Content Include="content\images\Translate-16-gray.gif" />
+    <Content Include="content\images\Translate-16.png" />
+    <Content Include="content\images\Translate.png" />
+    <Content Include="content\images\user.png" />
+    <Content Include="content\images\view.gif" />
+    <Content Include="content\images\warning16.gif" />
+    <Content Include="content\images\warningDialogHeader.png" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-icons_222222_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\default\jquery-ui.css" />
+    <Content Include="External\jquery-ui-1.11.2\default\jquery-ui.min.css" />
+    <Content Include="External\jquery-ui-1.11.2\default\jquery-ui.structure.css" />
+    <Content Include="External\jquery-ui-1.11.2\default\jquery-ui.structure.min.css" />
+    <Content Include="External\jquery-ui-1.11.2\default\jquery-ui.theme.css" />
+    <Content Include="External\jquery-ui-1.11.2\default\jquery-ui.theme.min.css" />
+    <Content Include="External\jquery-ui-1.11.2\jquery-ui.js" />
+    <Content Include="External\jquery-ui-1.11.2\jquery-ui.min.js" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\jquery-ui.css" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\jquery-ui.min.css" />
+    <Content Include="External\jquery-ui-1.11.2\smoothness\theme.css" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\jquery-ui.css" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\jquery-ui.min.css" />
+    <Content Include="External\jquery-ui-1.11.2\ui-lightness\theme.css" />
+    <Content Include="External\jquery.jqGrid-4.6.0\css\ui.jqgrid.css" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-de.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-el.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-en.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-es.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-fr.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-it.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-ro.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\i18n\grid.locale-ru.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\jquery.jqGrid.min.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\js\jquery.jqGrid.src.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\grid.addons.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\grid.postext.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\grid.setcolumns.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\jquery.contextmenu.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\jquery.searchFilter.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\jquery.tablednd.js" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\searchFilter.css" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\ui.multiselect.css" />
+    <Content Include="External\jquery.jqGrid-4.6.0\plugins\ui.multiselect.js" />
+    <Content Include="External\paulkinzett-toolbar\bootstrap.icons.css" />
+    <Content Include="External\paulkinzett-toolbar\glyphicons-halflings.png" />
+    <Content Include="External\paulkinzett-toolbar\Gruntfile.js" />
+    <Content Include="External\paulkinzett-toolbar\jquery.toolbar.js" />
+    <Content Include="External\paulkinzett-toolbar\jquery.toolbar.min.js" />
+    <Content Include="External\paulkinzett-toolbar\jquery.toolbars.css" />
+    <Content Include="manager\clientprofiles\create.aspx" />
+    <Content Include="manager\clientprofiles\edit.aspx" />
+    <Content Include="manager\clientprofiles\list.aspx" />
+    <Content Include="manager\customers\payments\create.aspx" />
+    <Content Include="manager\customers\payments\edit.aspx" />
+    <Content Include="manager\emails\knownemails\list.aspx" />
+    <Content Include="manager\emails\systememails\list.aspx" />
+    <Content Include="manager\emails\templates\list.aspx" />
+    <Content Include="manager\libraries\questions\edit.aspx" />
+    <Content Include="manager\libraries\questions\list.aspx" />
+    <Content Include="manager\security\logins\list.aspx" />
+    <Content Include="content\login.css" />
+    <Content Include="content\manager.css" />
+    <Content Include="content\msdropdown\dd_arrow.gif" />
+    <Content Include="content\msdropdown\title-bg.gif" />
+    <Content Include="content\theme00.css" />
+    <Content Include="default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="logoff.aspx" />
+    <Content Include="manager\controls\CommonDialogs.ascx" />
+    <Content Include="manager\customers\contacts\contactsform.ascx" />
+    <Content Include="manager\customers\contacts\create.aspx" />
+    <Content Include="manager\customers\contacts\edit.aspx" />
+    <Content Include="manager\customers\create.aspx" />
+    <Content Include="manager\customers\edit.aspx" />
+    <Content Include="manager\customers\list.aspx" />
+    <Content Include="manager\home.aspx" />
+    <Content Include="manager\security\roles\add.aspx" />
+    <Content Include="manager\security\roles\edit.aspx" />
+    <Content Include="manager\security\roles\list.aspx" />
+    <Content Include="manager\security\roles\rolesform.ascx" />
+    <Content Include="manager\security\users\add.aspx" />
+    <Content Include="manager\security\users\edit.aspx" />
+    <Content Include="manager\security\users\list.aspx" />
+    <Content Include="manager\security\users\usersform.ascx" />
+    <Content Include="manager\system\countries\list.aspx" />
+    <Content Include="manager\system\languages\list.aspx" />
+    <Content Include="manager\system\parameters\list.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="clay\Web.config" />
+    <Content Include="clay\Default.Master" />
+    <Content Include="clay\textedit\CHANGES.md" />
+    <Content Include="clay\textedit\LICENSE.md" />
+    <Content Include="clay\textedit\plugins\scayt\LICENSE.md" />
+    <Content Include="clay\textedit\plugins\scayt\README.md" />
+    <Content Include="clay\textedit\plugins\wsc\LICENSE.md" />
+    <Content Include="clay\textedit\plugins\wsc\README.md" />
+    <Content Include="clay\textedit\README.md" />
+    <Content Include="clay\textedit\skins\moono\readme.md" />
+    <Content Include="clay\textedit\skins\silver-master\readme.md" />
+    <Content Include="manager\Web.config" />
+    <Content Include="manager\Manager.Master" />
+    <Content Include="clay\fileman\asp_net\main.ashx" />
+    <Content Include="clay\fileman\conf.json" />
+    <Content Include="clay\fileman\lang\bg.json" />
+    <Content Include="clay\fileman\lang\de.json" />
+    <Content Include="clay\fileman\lang\en.json" />
+    <Content Include="clay\fileman\lang\fr.json" />
+    <Content Include="clay\fileman\asp_net\connector.ashx" />
+    <Content Include="clay\fileman\web.config" />
+    <Content Include="clay\mysurveys\analysis\Analysis.master" />
+    <Content Include="content\toastr.scss" />
+    <Content Include="content\toastr.less" />
+    <Content Include="External\paulkinzett-toolbar\bower.json" />
+    <Content Include="External\paulkinzett-toolbar\toolbar.jquery.json" />
+    <None Include="Properties\PublishProfiles\ValisManager.pubxml" />
+    <None Include="scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\highcharts\gfx\vml-radial-gradient.png" />
+    <Content Include="Scripts\highcharts\graphics\meteogram-symbols-30px.png" />
+    <Content Include="Scripts\highcharts\graphics\skies.jpg" />
+    <Content Include="Scripts\highcharts\graphics\snow.png" />
+    <Content Include="Scripts\highcharts\graphics\sun.png" />
+    <Content Include="Scripts\highcharts\js\adapters\standalone-framework.js" />
+    <Content Include="Scripts\highcharts\js\adapters\standalone-framework.src.js" />
+    <Content Include="Scripts\highcharts\js\highcharts-3d.js" />
+    <Content Include="Scripts\highcharts\js\highcharts-3d.src.js" />
+    <Content Include="Scripts\highcharts\js\highcharts-all.js" />
+    <Content Include="Scripts\highcharts\js\highcharts-more.js" />
+    <Content Include="Scripts\highcharts\js\highcharts-more.src.js" />
+    <Content Include="Scripts\highcharts\js\highcharts.js" />
+    <Content Include="Scripts\highcharts\js\highcharts.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\canvas-tools.js" />
+    <Content Include="Scripts\highcharts\js\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\data.js" />
+    <Content Include="Scripts\highcharts\js\modules\data.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\drilldown.js" />
+    <Content Include="Scripts\highcharts\js\modules\drilldown.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\exporting.js" />
+    <Content Include="Scripts\highcharts\js\modules\exporting.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\funnel.js" />
+    <Content Include="Scripts\highcharts\js\modules\funnel.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\heatmap.js" />
+    <Content Include="Scripts\highcharts\js\modules\heatmap.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\no-data-to-display.js" />
+    <Content Include="Scripts\highcharts\js\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\highcharts\js\modules\solid-gauge.js" />
+    <Content Include="Scripts\highcharts\js\modules\solid-gauge.src.js" />
+    <Content Include="Scripts\highcharts\js\themes\dark-blue.js" />
+    <Content Include="Scripts\highcharts\js\themes\dark-green.js" />
+    <Content Include="Scripts\highcharts\js\themes\dark-unica.js" />
+    <Content Include="Scripts\highcharts\js\themes\gray.js" />
+    <Content Include="Scripts\highcharts\js\themes\grid-light.js" />
+    <Content Include="Scripts\highcharts\js\themes\grid.js" />
+    <Content Include="Scripts\highcharts\js\themes\sand-signika.js" />
+    <Content Include="Scripts\highcharts\js\themes\skies.js" />
+    <Content Include="scripts\jquery-2.1.1.js" />
+    <Content Include="scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.ddslick.js" />
+    <Content Include="Scripts\jquery.ddslick.min.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.form.min.js" />
+    <Content Include="scripts\jquery.form.min.js.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jscroll-master\jquery.jscroll.js" />
+    <Content Include="Scripts\jscroll-master\jquery.jscroll.min.js" />
+    <Content Include="Scripts\ms-Dropdown-master\dd.css" />
+    <Content Include="Scripts\ms-Dropdown-master\jquery.dd.js" />
+    <Content Include="Scripts\ms-Dropdown-master\jquery.dd.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="clay\mysurveys\collectors\CollectorDetails.master" />
+    <None Include="Properties\PublishProfiles\ValisManager Local Publish.pubxml" />
+    <Content Include="scripts\dropmenu.js" />
+    <Content Include="scripts\jquery.cookie.js" />
+    <Content Include="scripts\jquery.ui.touch-punch.min.js" />
+    <Content Include="scripts\jquery-2.1.1.min.map" />
+    <Content Include="scripts\support.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Global.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global.resx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\addressbook\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\addressbook\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\addressbook\addressbook.aspx.cs">
+      <DependentUpon>addressbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\addressbook\addressbook.aspx.designer.cs">
+      <DependentUpon>addressbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\addressbook\contacts.aspx.cs">
+      <DependentUpon>contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\addressbook\contacts.aspx.designer.cs">
+      <DependentUpon>contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\addressbook\export.aspx.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\addressbook\export.aspx.designer.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\addressbook\remove.aspx.cs">
+      <DependentUpon>remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\addressbook\remove.aspx.designer.cs">
+      <DependentUpon>remove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\controls\balanceStatistics.ascx.cs">
+      <DependentUpon>balanceStatistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\controls\balanceStatistics.ascx.designer.cs">
+      <DependentUpon>balanceStatistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\controls\CollectorNavigation.ascx.cs">
+      <DependentUpon>CollectorNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\controls\CollectorNavigation.ascx.designer.cs">
+      <DependentUpon>CollectorNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\controls\CommonDialogs.ascx.cs">
+      <DependentUpon>CommonDialogs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\controls\CommonDialogs.ascx.designer.cs">
+      <DependentUpon>CommonDialogs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\controls\EditSurveyTabs.ascx.cs">
+      <DependentUpon>EditSurveyTabs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\controls\EditSurveyTabs.ascx.designer.cs">
+      <DependentUpon>EditSurveyTabs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\controls\TopHeader.ascx.cs">
+      <DependentUpon>TopHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\controls\TopHeader.ascx.designer.cs">
+      <DependentUpon>TopHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="clay\fileman\asp_net\connector.ashx.cs">
+      <DependentUpon>connector.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\login\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\login\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\myaccount.aspx.cs">
+      <DependentUpon>myaccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\myaccount.aspx.designer.cs">
+      <DependentUpon>myaccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\Analysis.master.cs">
+      <DependentUpon>Analysis.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\Analysis.master.designer.cs">
+      <DependentUpon>Analysis.master</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\AnalysisBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\controls\analysisTabs.ascx.cs">
+      <DependentUpon>analysisTabs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\controls\analysisTabs.ascx.designer.cs">
+      <DependentUpon>analysisTabs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\controls\analysisToolBox.ascx.cs">
+      <DependentUpon>analysisToolBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\controls\analysisToolBox.ascx.designer.cs">
+      <DependentUpon>analysisToolBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\responses.aspx.cs">
+      <DependentUpon>responses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\responses.aspx.designer.cs">
+      <DependentUpon>responses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\summary.aspx.cs">
+      <DependentUpon>summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\analysis\summary.aspx.designer.cs">
+      <DependentUpon>summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\addCollector.aspx.cs">
+      <DependentUpon>addCollector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\addCollector.aspx.designer.cs">
+      <DependentUpon>addCollector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\charges.aspx.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\charges.aspx.designer.cs">
+      <DependentUpon>charges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\chargesAdd.aspx.cs">
+      <DependentUpon>chargesAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\chargesAdd.aspx.designer.cs">
+      <DependentUpon>chargesAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\chargesEdit.aspx.cs">
+      <DependentUpon>chargesEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\chargesEdit.aspx.designer.cs">
+      <DependentUpon>chargesEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\CollectorDetails.master.cs">
+      <DependentUpon>CollectorDetails.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\CollectorDetails.master.designer.cs">
+      <DependentUpon>CollectorDetails.master</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\CollectorsPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\configuration-website.aspx.cs">
+      <DependentUpon>configuration-website.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\configuration-website.aspx.designer.cs">
+      <DependentUpon>configuration-website.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\dataentry.aspx.cs">
+      <DependentUpon>dataentry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\dataentry.aspx.designer.cs">
+      <DependentUpon>dataentry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\details-email.aspx.cs">
+      <DependentUpon>details-email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\details-email.aspx.designer.cs">
+      <DependentUpon>details-email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\details-weblink.aspx.cs">
+      <DependentUpon>details-weblink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\details-weblink.aspx.designer.cs">
+      <DependentUpon>details-weblink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\details-website.aspx.cs">
+      <DependentUpon>details-website.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\details-website.aspx.designer.cs">
+      <DependentUpon>details-website.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\editMessage_content.aspx.cs">
+      <DependentUpon>editMessage_content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\editMessage_content.aspx.designer.cs">
+      <DependentUpon>editMessage_content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\editMessage_recipients.aspx.cs">
+      <DependentUpon>editMessage_recipients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\editMessage_recipients.aspx.designer.cs">
+      <DependentUpon>editMessage_recipients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\editMessage_schedule.aspx.cs">
+      <DependentUpon>editMessage_schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\editMessage_schedule.aspx.designer.cs">
+      <DependentUpon>editMessage_schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\message_preview.aspx.cs">
+      <DependentUpon>message_preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\message_preview.aspx.designer.cs">
+      <DependentUpon>message_preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\overview.aspx.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\overview.aspx.designer.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipients.aspx.cs">
+      <DependentUpon>recipients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipients.aspx.designer.cs">
+      <DependentUpon>recipients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipientsAdd.aspx.cs">
+      <DependentUpon>recipientsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipientsAdd.aspx.designer.cs">
+      <DependentUpon>recipientsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipientsDownload.aspx.cs">
+      <DependentUpon>recipientsDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipientsDownload.aspx.designer.cs">
+      <DependentUpon>recipientsDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipientsRemove.aspx.cs">
+      <DependentUpon>recipientsRemove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\recipientsRemove.aspx.designer.cs">
+      <DependentUpon>recipientsRemove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\restrictions.aspx.cs">
+      <DependentUpon>restrictions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\restrictions.aspx.designer.cs">
+      <DependentUpon>restrictions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\collectors\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\Design_Survey.aspx.cs">
+      <DependentUpon>Design_Survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\Design_Survey.aspx.designer.cs">
+      <DependentUpon>Design_Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\Edit_Survey.aspx.cs">
+      <DependentUpon>Edit_Survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\Edit_Survey.aspx.designer.cs">
+      <DependentUpon>Edit_Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\mysurveys.aspx.cs">
+      <DependentUpon>mysurveys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\mysurveys.aspx.designer.cs">
+      <DependentUpon>mysurveys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\New_Survey.aspx.cs">
+      <DependentUpon>New_Survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\New_Survey.aspx.designer.cs">
+      <DependentUpon>New_Survey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DescriptiveTextHelper.aspx.cs">
+      <DependentUpon>DescriptiveTextHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DescriptiveTextHelper.aspx.designer.cs">
+      <DependentUpon>DescriptiveTextHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\RangeHelper.aspx.cs">
+      <DependentUpon>RangeHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\RangeHelper.aspx.designer.cs">
+      <DependentUpon>RangeHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\CompositeHelper.aspx.cs">
+      <DependentUpon>CompositeHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\CompositeHelper.aspx.designer.cs">
+      <DependentUpon>CompositeHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DateHelper.aspx.cs">
+      <DependentUpon>DateHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DateHelper.aspx.designer.cs">
+      <DependentUpon>DateHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DateTimeHelper.aspx.cs">
+      <DependentUpon>DateTimeHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DateTimeHelper.aspx.designer.cs">
+      <DependentUpon>DateTimeHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DecimalHelper.aspx.cs">
+      <DependentUpon>DecimalHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DecimalHelper.aspx.designer.cs">
+      <DependentUpon>DecimalHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DropDownHelper.aspx.cs">
+      <DependentUpon>DropDownHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\DropDownHelper.aspx.designer.cs">
+      <DependentUpon>DropDownHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\IntegerHelper.aspx.cs">
+      <DependentUpon>IntegerHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\IntegerHelper.aspx.designer.cs">
+      <DependentUpon>IntegerHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\ManyFromManyHelper.aspx.cs">
+      <DependentUpon>ManyFromManyHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\ManyFromManyHelper.aspx.designer.cs">
+      <DependentUpon>ManyFromManyHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\MatrixManyPerRowCustomHelper.aspx.cs">
+      <DependentUpon>MatrixManyPerRowCustomHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\MatrixManyPerRowCustomHelper.aspx.designer.cs">
+      <DependentUpon>MatrixManyPerRowCustomHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\MatrixManyPerRowHelper.aspx.cs">
+      <DependentUpon>MatrixManyPerRowHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\MatrixManyPerRowHelper.aspx.designer.cs">
+      <DependentUpon>MatrixManyPerRowHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\MatrixOnePerRowHelper.aspx.cs">
+      <DependentUpon>MatrixOnePerRowHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\MatrixOnePerRowHelper.aspx.designer.cs">
+      <DependentUpon>MatrixOnePerRowHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\MultipleLineHelper.aspx.cs">
+      <DependentUpon>MultipleLineHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\MultipleLineHelper.aspx.designer.cs">
+      <DependentUpon>MultipleLineHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\OneFromManyHelper.aspx.cs">
+      <DependentUpon>OneFromManyHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\OneFromManyHelper.aspx.designer.cs">
+      <DependentUpon>OneFromManyHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\SingleLineHelper.aspx.cs">
+      <DependentUpon>SingleLineHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\SingleLineHelper.aspx.designer.cs">
+      <DependentUpon>SingleLineHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\SliderHelper.aspx.cs">
+      <DependentUpon>SliderHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\SliderHelper.aspx.designer.cs">
+      <DependentUpon>SliderHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\TimeHelper.aspx.cs">
+      <DependentUpon>TimeHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\mysurveys\QuestionHelpers\TODO\TimeHelper.aspx.designer.cs">
+      <DependentUpon>TimeHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\payments\mycharges.aspx.cs">
+      <DependentUpon>mycharges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\payments\mycharges.aspx.designer.cs">
+      <DependentUpon>mycharges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\payments\mypayments.aspx.cs">
+      <DependentUpon>mypayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\payments\mypayments.aspx.designer.cs">
+      <DependentUpon>mypayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clay\verify.aspx.cs">
+      <DependentUpon>verify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clay\verify.aspx.designer.cs">
+      <DependentUpon>verify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commands\recipient\remove.aspx.cs">
+      <DependentUpon>remove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commands\recipient\remove.aspx.designer.cs">
+      <DependentUpon>remove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logoff.aspx.cs">
+      <DependentUpon>logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logoff.aspx.designer.cs">
+      <DependentUpon>logoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\clientprofiles\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\clientprofiles\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\clientprofiles\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\clientprofiles\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\clientprofiles\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\clientprofiles\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\controls\CommonDialogs.ascx.cs">
+      <DependentUpon>CommonDialogs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\controls\CommonDialogs.ascx.designer.cs">
+      <DependentUpon>CommonDialogs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\contacts\contactsform.ascx.cs">
+      <DependentUpon>contactsform.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\contacts\contactsform.ascx.designer.cs">
+      <DependentUpon>contactsform.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\contacts\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\contacts\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\contacts\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\contacts\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\payments\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\payments\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\customers\payments\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\customers\payments\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\emails\knownemails\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\emails\knownemails\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\emails\systememails\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\emails\systememails\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\emails\templates\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\emails\templates\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\libraries\questions\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\libraries\questions\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\libraries\questions\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\libraries\questions\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\Manager.Master.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\Manager.Master.designer.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\logins\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\logins\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\roles\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\roles\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\roles\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\roles\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\roles\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\roles\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\roles\rolesform.ascx.cs">
+      <DependentUpon>rolesform.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\roles\rolesform.ascx.designer.cs">
+      <DependentUpon>rolesform.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\users\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\users\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\users\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\users\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\users\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\users\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\security\users\usersform.ascx.cs">
+      <DependentUpon>usersform.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\security\users\usersform.ascx.designer.cs">
+      <DependentUpon>usersform.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\system\countries\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\system\countries\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\system\languages\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\system\languages\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manager\system\parameters\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manager\system\parameters\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\filebrowser\FetchFile.cs" />
+    <Compile Include="Support\filebrowser\FetchFileEx.cs" />
+    <Compile Include="Support\filebrowser\FetchThumbnail.cs" />
+    <Compile Include="Support\Globals.cs" />
+    <Compile Include="Support\ManagerMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\ManagerPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\ManagerUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\Utilities.cs" />
+    <Compile Include="Support\ValisWebApiModule.cs" />
+    <Compile Include="Support\WebApiHandler.cs" />
+    <Compile Include="Support\WebApi\analysis\ExportAllDataXLSX.cs" />
+    <Compile Include="Support\WebApi\analysis\ExportSummaryPDF.cs" />
+    <Compile Include="Support\WebApi\analysis\SetChartType.cs" />
+    <Compile Include="Support\WebApi\analysis\SwitchAxisScale.cs" />
+    <Compile Include="Support\WebApi\analysis\ToggleChartVisibility.cs" />
+    <Compile Include="Support\WebApi\analysis\ToggleDataTableVisibility.cs" />
+    <Compile Include="Support\WebApi\analysis\ToggleZeroResponseOptionsVisibility.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Contacts\Create.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Contacts\Delete.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Contacts\GetById.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Contacts\GetPage.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Contacts\Update.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Create.cs" />
+    <Compile Include="Support\WebApi\ClientLists\Delete.cs" />
+    <Compile Include="Support\WebApi\ClientLists\GetById.cs" />
+    <Compile Include="Support\WebApi\ClientLists\GetPage.cs" />
+    <Compile Include="Support\WebApi\Clients\GetCharges.cs" />
+    <Compile Include="Support\WebApi\Clients\GetClients.cs" />
+    <Compile Include="Support\WebApi\Clients\GetClientUsers.cs" />
+    <Compile Include="Support\WebApi\Clients\SetNewPswd.cs" />
+    <Compile Include="Support\WebApi\Clients\UnlockUser.cs" />
+    <Compile Include="Support\WebApi\Collectors\ClearResponses.cs" />
+    <Compile Include="Support\WebApi\Collectors\Close.cs" />
+    <Compile Include="Support\WebApi\Collectors\Delete.cs" />
+    <Compile Include="Support\WebApi\Collectors\GetAll.cs" />
+    <Compile Include="Support\WebApi\Collectors\GetById.cs" />
+    <Compile Include="Support\WebApi\Collectors\GetChargedCollectors.cs" />
+    <Compile Include="Support\WebApi\Collectors\GetCharges.cs" />
+    <Compile Include="Support\WebApi\Collectors\Open.cs" />
+    <Compile Include="Support\WebApi\Collectors\UpdateName.cs" />
+    <Compile Include="Support\WebApi\Collectors\VerifySenderAddress.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\AddBounced.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\AddOptedOut.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\AddVerified.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\Delete.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\GetByAddress.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\GetById.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\GetPage.cs" />
+    <Compile Include="Support\WebApi\KnownEmails\Update.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\CreateColumn.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\CreateOption.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\CreateQuestion.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\DeleteColumn.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\DeleteOption.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\GetColumnById.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\GetColumns.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\GetOptionById.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\GetOptions.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\GetQuestions.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\UpdateColumn.cs" />
+    <Compile Include="Support\WebApi\LibraryQuestions\UpdateOption.cs" />
+    <Compile Include="Support\WebApi\Logins\GetById.cs" />
+    <Compile Include="Support\WebApi\Logins\GetLogins.cs" />
+    <Compile Include="Support\WebApi\Messages\Delete.cs" />
+    <Compile Include="Support\WebApi\Messages\GetById.cs" />
+    <Compile Include="Support\WebApi\Messages\GetDraftMessages.cs" />
+    <Compile Include="Support\WebApi\Messages\GetReadyMessages.cs" />
+    <Compile Include="Support\WebApi\Messages\UnSchedule.cs" />
+    <Compile Include="Support\WebApi\Payments\GetCharges.cs" />
+    <Compile Include="Support\WebApi\Payments\GetChargesForSubgrid.cs" />
+    <Compile Include="Support\WebApi\Payments\GetChargesForCollector.cs" />
+    <Compile Include="Support\WebApi\Payments\GetPaymentInfoForCollectorPayment.cs" />
+    <Compile Include="Support\WebApi\Payments\GetPayments.cs" />
+    <Compile Include="Support\WebApi\Payments\GetPaymentsView1.cs" />
+    <Compile Include="Support\WebApi\Payments\RemoveFromCollector.cs" />
+    <Compile Include="Support\WebApi\Profiles\GetProfiles.cs" />
+    <Compile Include="Support\WebApi\Recipients\GetSurveyRuntimeURL.cs" />
+    <Compile Include="Support\WebApi\Recipients\Remove.cs" />
+    <Compile Include="Support\WebApi\Recipients\GetAll.cs" />
+    <Compile Include="Support\WebApi\Recipients\GetById.cs" />
+    <Compile Include="Support\WebApi\Roles\GetRoles.cs" />
+    <Compile Include="Support\WebApi\Statistics\GetClientDashboard.cs" />
+    <Compile Include="Support\WebApi\Statistics\GetSystemDashboard.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\Create.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\Delete.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\GetCandidateSkipToPages.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\GetDeleteOptions.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\GetAll.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\GetById.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\SetSkipLogic.cs" />
+    <Compile Include="Support\WebApi\SurveyPages\Update.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\AddLibraryQuestion.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\Create.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\Delete.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetById.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetByIdForEdit.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetByIdForSkipLogic.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetCandidateSkipToPages.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetDeleteOptions.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetOptions.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\GetQuestionsForPage.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\SetSkipLogic.cs" />
+    <Compile Include="Support\WebApi\SurveyQuestions\Update.cs" />
+    <Compile Include="Support\WebApi\Surveys\AddLanguage.cs" />
+    <Compile Include="Support\WebApi\Surveys\ClientGetAll.cs" />
+    <Compile Include="Support\WebApi\Surveys\Delete.cs" />
+    <Compile Include="Support\WebApi\Surveys\GetById.cs" />
+    <Compile Include="Support\WebApi\SystemUser\ChangePassword.cs" />
+    <Compile Include="Support\WebApi\SystemUser\GetSystemUsers.cs" />
+    <Compile Include="Support\WebApi\SystemUser\SetNewPswd.cs" />
+    <Compile Include="Support\WebApi\SystemUser\UnlockUser.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\AddCollectorsFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\AddQnaFilterWithOptions.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\AddQnaFilterWithOptionsAndColumns.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\AddQnaFilterWithUserInputs.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\AddResponseTimeFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\AddTimePeriodFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DeleteCollectorsFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DeleteQnaFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DeleteResponseTimeFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DeleteTimePeriodFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DisableCollectorsFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DisableQnaFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DisableResponseTimeFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\DisableTimePeriodFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\EnableCollectorsFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\EnableQnaFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\EnableResponseTimeFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\EnableTimePeriodFilter.cs" />
+    <Compile Include="Support\WebApi\ViewFilters\GetQnaFilterById.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\jscroll-master\.gitignore" />
+    <Content Include="scripts\jscroll-master\jscroll.jquery.json" />
+    <Content Include="scripts\jscroll-master\README.md" />
+    <Content Include="scripts\toastr.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Valis.Core.HtmlRenderers\Valis.Core.HtmlRenderers.csproj">
+      <Project>{905974bd-02dc-474d-8301-8b05ad25043f}</Project>
+      <Name>Valis.Core.HtmlRenderers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Valis.Core.SqlServer\Valis.Core.SqlServer.csproj">
+      <Project>{06f7bc6c-7841-4cb7-9e31-b10525a27e62}</Project>
+      <Name>Valis.Core.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Valis.Core\Valis.Core.csproj">
+      <Project>{ceb280c4-5d7c-4c89-bd9b-18b405df026b}</Project>
+      <Name>Valis.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="commands\sender\" />
+    <Folder Include="manager\login\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Global.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Global.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>37360</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44384/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

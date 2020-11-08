@@ -1,0 +1,622 @@
+﻿#body{
+    height: 600px;
+}
+
+#body, .primary, .wrapper {
+    clear: both;
+}
+#body:after, .primary:after, .wrapper:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+#body .wrapper {
+    padding: 0 10px;
+}
+
+
+/*#region topzone
+----------------------------------------*/
+.topzone {
+    background-color: #3F3F3F;
+    box-shadow: 0 0 2px #333333;
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 17px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
+}
+
+.topzone .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1200px;
+}
+.topzone .wrapper:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#top-header {
+    height: 42px;
+    position: relative;
+    z-index: 2;
+}
+#top-header > .wrapper {
+    z-index: 3;
+}
+
+.topzone .header-section.first-child
+{
+    float: right;
+    width: auto;
+}
+.topzone .header-section.last-child
+{
+    float: right;
+    width: auto;
+    margin-left: 10px;
+    position: relative;
+}
+span.brandName
+{
+    display: inline-block;
+    padding: 6px 0px 6px 0px;
+    color: #f1f1f1;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0px 20px;
+}
+
+
+
+
+.responsive-nav {
+
+    z-index: 1;
+}
+.responsive-nav .wrapper {
+    position: relative;
+    display: table;
+}
+.responsive-nav .main-nav {
+    float: left;
+    margin-left: 316px;
+}
+.responsive-nav .main-nav .nav-item {
+    float: left;
+    line-height: 13px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.responsive-nav .main-nav .nav-item:first-child {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.responsive-nav .right-nav {
+    float: right;
+}
+.responsive-nav .right-nav .nav-item {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.responsive-nav .nav-link {
+    padding: 9px 0 7px;
+    color : #d86f1e;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+}
+/*#endregion*/
+
+
+
+#body {
+    margin-bottom: 30px;
+    margin-top: 80px;
+    padding: 0px;
+    clear: both;
+    display: table;
+}
+#body, #body .hp-nus-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 1200px;
+}
+
+div#content
+{
+    font-size: 1.4em;
+}
+
+
+/*#region JQuery Component containers
+-------------------------------------------*/
+.ui-widget 
+{ 
+    font-family: Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif; 
+    font-size: 1.42em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+
+/*we change the default appearence of jQuery dialogs:*/
+div.ui-dialog 
+{ 
+    padding: 0px;
+    z-index: 600;
+}
+.ui-widget-overlay
+{
+    /*z-index: 200;*/
+}
+.ui-dialog-titlebar
+{
+    background-image: url(images/global-dialog-titlebar.gif);  
+    color: #ffffff;
+    height: 20px;
+    line-height: 20px;
+    border: 0px;
+    border-radius: 0;
+}
+
+
+/* Overlays */
+.ui-widget-overlay {background: url("images/dim.png") repeat scroll 0 0 transparent; opacity: 1;}
+#fuzz{display: none;z-index: 200;}
+
+
+
+
+
+.ui-jqgrid
+{
+    font-size:1em;
+}
+.ui-jqgrid .ui-jqgrid-htable th
+{
+    font-size: 12px;
+    line-height: 2.2em;
+}
+.ui-jqgrid .ui-jqgrid-htable th div
+{
+    height: auto;
+}
+.ui-jqgrid .ui-icon-desc {
+    height: 12px;
+    margin-top: 8px;
+}
+.ui-jqgrid .ui-icon-asc {
+    height: 12px;
+    margin-top: 1px;
+}
+.ui-jqgrid td
+{
+    font-size: 14px;
+    line-height: 2.4em;
+}
+.ui-jqgrid tr.jqgrow td {
+    padding: 0 4px;
+}
+
+.ui-jqgrid .ui-jqgrid-pager {
+    height: 28px;
+}
+.ui-jqgrid .ui-pg-table td{
+    font-size: 11px;
+    line-height: 24px;
+}
+.ui-jqgrid .ui-paging-info {
+    font-size: 11px;
+    line-height: 24px;
+}
+
+
+
+/*CommonDialogs*/
+span.commonDialogTitle {
+    padding-left: 28px;
+}
+.questionDialog .ui-dialog-titlebar
+{
+    background-image: url(images/questionDialogHeader.png);   
+    background-repeat: no-repeat;
+    background-position: left, top;
+}
+.warningDialog .ui-dialog-titlebar
+{
+    background-image: url(images/warningDialogHeader.png);   
+    background-repeat: no-repeat;
+    background-position: left, top;
+}
+.errorDialog .ui-dialog-titlebar
+{
+    background-image: url(images/errorDialogHeader.png);   
+    background-repeat: no-repeat;
+    background-position: left, top;
+}
+.infoDialog .ui-dialog-titlebar
+{
+    background-image: url(images/infoDialogHeader.png);   
+    background-repeat: no-repeat;
+    background-position: left, top;
+}
+.deleteDialog .ui-dialog-titlebar
+{
+    background-image: url(images/deleteDialogHeader.png);   
+    background-repeat: no-repeat;
+    background-position: left, top;
+}
+
+/*Other Forms*/
+
+.theQuestionForm  
+{
+    padding: 0px;
+}
+
+.questionForm .ui-dialog-titlebar
+{
+    background-image: url(images/btnMain2.gif);   
+}
+.inputDialog .ui-dialog-titlebar
+{
+    background-image: url(images/btnMain2.gif);   
+}
+
+/*#endregion*/
+
+
+
+/*#region styles for our CommonDialogs:
+-------------------------------------------*/
+.errorIcon { background: url('images/error16.gif'); background-repeat: no-repeat; padding-left: 28px; }
+.informationIcon { background: url('images/information16.gif'); background-repeat: no-repeat; padding-left: 28px; }
+.warningIcon { background: url('images/warning16.gif'); background-repeat: no-repeat; padding-left: 28px; }
+.questionIcon { background: url('images/questionIcon18.png'); background-repeat: no-repeat; padding-left: 28px; background-position: 0px -1px;}
+
+
+span#statusLine {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+div#responseText {
+    margin-top: 6px;
+}
+div.requestWrapper {
+    color: #d81313;
+    background-color: #e8e114;
+    font-size: 1.3em;
+}
+div.errorContainer {
+    margin-top: 12px;
+}
+span.errorText {
+    font-size: 1.2em;
+}
+
+
+div#showErrorBand
+{
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding: .58em;
+    background-color: #e8e114; color: #d81313; border: 0px solid #d81313;
+    text-align: center;
+    position: fixed; top: 72px;
+    width: 100%;
+
+	opacity:0.86;
+    filter:alpha(opacity=86); /* For IE8 and earlier */    
+}
+
+div#showInfoBand
+{
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding: .58em;
+    background-color: #e8e114; color:#272727; border: 1px dashed #5b5b5b;
+    text-align: center;
+    position: fixed; top: 72px;
+    width: 100%;
+
+	opacity:0.86;
+    filter:alpha(opacity=86); /* For IE8 and earlier */    
+}
+div.ErrorMessage {text-align:left;margin:15px 0 15px 0;padding:10px;background:#CC0000;font-weight:bold;color:#fff; font-size:12px;}
+/*#endregion*/
+
+
+
+/*#region jqGrid LoadError Styles!
+-------------------------------------------*/
+div.jqGridError
+{
+    padding: 6px;
+    font-size: 1.2em;
+}
+div.jqGridErrorStatus
+{
+    font-size: 1.2em;
+}
+div.jqGridErrorResponse
+{
+
+}
+/*#endregion*/
+
+
+
+/*#region Our Dialogs/Forms
+-------------------------------------------*/
+div.valisInputForm
+{
+    position: relative;
+}
+div.valisInputForm .formWrapper
+{
+    margin: 8px 0px 8px 4px;
+    padding: 2px;
+}
+div.valisInputForm .formRow
+{
+    margin: 6px 0px 6px 0px;
+    padding: 4px;
+}
+div.valisInputForm label
+{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    margin-right: 8px;
+}
+div.valisInputForm input[type=text], div.valisInputForm select, div.valisInputForm textarea
+{
+    min-width: 180px;
+}
+div.valisInputForm .formFooter
+{
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
+    color: #1388d8;
+    font-size: 10px;
+}
+/*#endregion*/
+
+
+
+
+div.pageTitle {
+    margin: 18px 0px 18px 0px;
+    line-height: 42px;
+}
+div.pageTitle h1 {
+    font-size: 1.52em;
+    display: inline-block;
+}
+div.pageTitle .back-link {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+div.pageSubTitle {
+    margin: 6px 0px 12px 0px;
+    line-height: 1.8em;
+}
+div.pageSubTitle h1 {
+    font-size: 1.48em;
+    display: inline-block;
+}
+div.pageSubTitle .back-link {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+div.pageTools {
+    margin: 12px;
+}
+
+div.horizontal_separator
+{
+    border: 1px dotted #D6D6D6;
+    margin: 5px 0;
+}
+div.horizontal_separator2
+{
+    border: 1px solid #f1f1f1;
+    margin: 0;
+}
+
+
+
+/*various
+-------------------------------------------*/
+a.redbutton, input[type=submit].redbutton, .ui-widget button.redbutton
+{
+    display:inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    color: #f1f1f1;
+    padding: 0px 8px 0px 8px;
+    border-radius: 3px;
+    background: url("/content/images/btnMain4.gif") repeat-x scroll 0 0 #777777;
+    cursor: pointer;
+    min-width: 70px;
+}
+a.greenbutton, input[type=submit].greenbutton, .ui-widget button.greenbutton
+{
+    display:inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    color: #f1f1f1;
+    padding: 0px 8px 0px 8px;
+    border-radius: 3px;
+    background: url("/content/images/btnMain.gif") repeat-x scroll 0 0 #2eacaa;
+    cursor: pointer;
+    min-width: 70px;
+}
+a.lightgreenbutton, input[type=submit].lightgreenbutton, .ui-widget button.lightgreenbutton
+{
+    display:inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    color: #f1f1f1;
+    padding: 0px 8px 0px 8px;
+    border-radius: 3px;
+    background: url("/content/images/btnMain2.gif") repeat-x scroll 0 0 #2eacaa;
+    cursor: pointer;
+    min-width: 70px;
+}
+input[type=submit].greenbutton
+{
+    border: 1px;
+    height: 1.8em;
+}
+a.greybutton, input[type=submit].greybutton, .ui-widget button.greybutton
+{
+    display:inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    color: #222222;
+    padding: 0px 8px 0px 8px;
+    border-radius: 3px;
+    background: url("/content/images/bg-grygrad.gif") repeat-x scroll 0 0 #777777;
+    cursor: pointer;
+}
+
+input, textarea, select
+{
+    background-color: #f1f9fb; 
+    padding: 2px;
+    border: 1px solid #3f3f3f;
+}
+
+img.required-image
+{
+    width: 14px;
+    height: 14px;
+}
+
+img.translatable-image
+{
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 2px;
+}
+
+span.translatable-image
+{
+    display: compact;
+    width: 16px;
+    height: 16px;
+    background: url(images/Translatable.png) no-repeat 0px 2px;
+
+    margin: 0 0 0 4px;
+}
+
+
+
+
+
+
+/*#region footer
+-------------------------------------------*/
+#footer {
+        clear: both;
+    content: "";
+    display: table;
+    border-top: 1px solid #CCCCCC;
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 1200px;
+}
+
+#footer .nav-footer:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+#footer .nav-footer {
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 17px;
+}
+#footer .nav-footer li {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    margin-top: 5px;
+    padding-right: 8px;
+}
+
+
+#footer .nav-legal:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+#footer .nav-legal {
+    float: left;
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 17px;
+}
+#footer .nav-legal li {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    margin-top: 5px;
+    padding-right: 8px;
+}
+/*#endregion*/
+
+
+
+
+@media only screen and (max-width: 1280px) and (max-height: 800px)
+{
+
+}

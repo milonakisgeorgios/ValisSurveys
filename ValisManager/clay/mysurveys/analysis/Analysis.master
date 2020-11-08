@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/clay/Default.Master" AutoEventWireup="false" CodeBehind="Analysis.master.cs" Inherits="ValisManager.clay.mysurveys.analysis.Analysis" %>
+<%@ Register src="controls/analysisToolBox.ascx" tagname="analysisToolBox" tagprefix="uc1" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        
+        div.pageTitle {
+            background-image: url(/content/images/RSReport_32xLG.png);
+            background-position: 0px 4px;
+            background-repeat: no-repeat;
+            padding-left: 36px;
+        }
+
+        td.leftColumn {
+            width: 240px;
+            height: 100%;
+            background-color: #fff;
+            vertical-align: top;
+        }
+        td.rightColumn{
+            height: 100%;
+            vertical-align: top;
+            background-color: #fff;
+        }
+
+    </style>
+    <script>
+
+    </script>
+    <asp:ContentPlaceHolder ID="head2" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContentHolder" runat="server">
+    <div class="pageTitle">
+        <h1><a class='back-link' href='/clay/mysurveys/mysurveys.aspx'><%=this.Server.HtmlEncode(this.SelectedSurvey.Title) %></a></h1>
+        
+    </div>
+    <table style="width: 100%" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td class="leftColumn">
+                    <uc1:analysisToolBox ID="analysisToolBox1" runat="server" />
+                </td>
+                <td class="rightColumn">
+                    <asp:ContentPlaceHolder ID="MainAnalysisPanelHolder" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</asp:Content>

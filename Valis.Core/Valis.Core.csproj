@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEB280C4-5D7C-4C89-BD9B-18B405DF026B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Valis.Core</RootNamespace>
+    <AssemblyName>Valis.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ARSoft.Tools.Net, Version=2.2.9.0, Culture=neutral, PublicKeyToken=1940454cd762ec57, processorArchitecture=MSIL">
+      <HintPath>..\packages\ARSoft.Tools.Net.2.2.9\lib\net45\ARSoft.Tools.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=15.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.15.0.8\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.7.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveObject.cs" />
+    <Compile Include="Builtins\BuiltinCountries.cs" />
+    <Compile Include="Builtins\BuiltinLanguages.cs" />
+    <Compile Include="Builtins\BuiltinLibraryQuestionCategories.cs" />
+    <Compile Include="Builtins\BuiltinProfiles.cs" />
+    <Compile Include="Builtins\BuiltinRoles.cs" />
+    <Compile Include="Builtins\BuiltinSystemUsers.cs" />
+    <Compile Include="Builtins\BuiltinThemes.cs" />
+    <Compile Include="Builtins\BuiltinVirtualPages.cs" />
+    <Compile Include="Configuration\SupportClasses.cs" />
+    <Compile Include="Configuration\ValisSection.cs" />
+    <Compile Include="Configuration\VsCoreConfiguration.cs" />
+    <Compile Include="Configuration\VsDaemonConfiguration.cs" />
+    <Compile Include="Configuration\VsManagerConfiguration.cs" />
+    <Compile Include="Configuration\VsReporterConfiguration.cs" />
+    <Compile Include="Configuration\VsServerConfiguration.cs" />
+    <Compile Include="Dal\FilesDaoBase.cs" />
+    <Compile Include="Dal\LibrariesDaoBase.cs" />
+    <Compile Include="Dal\SurveysDaoBase.cs" />
+    <Compile Include="Dal\SystemDaoBase.cs" />
+    <Compile Include="Dal\ViewModelDaoBase.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Entities\ContactImportOptions.cs" />
+    <Compile Include="Entities\ContactImportResult.cs" />
+    <Compile Include="Entities\QuestionAttributes.cs" />
+    <Compile Include="Entities\VLAccessToken.cs" />
+    <Compile Include="Entities\VLClient\VLClient.cs" />
+    <Compile Include="Entities\VLClient\VLClientList.cs" />
+    <Compile Include="Entities\VLClient\VLClientProfile.cs" />
+    <Compile Include="Entities\VLClient\VLClientUser.cs" />
+    <Compile Include="Entities\VLClient\VLCollectorPayment.cs" />
+    <Compile Include="Entities\VLClient\VLContact.cs" />
+    <Compile Include="Entities\VLClient\VLKnownEmail.cs" />
+    <Compile Include="Entities\VLClient\VLPayment.cs" />
+    <Compile Include="Entities\VLCollector\VLCollector.cs" />
+    <Compile Include="Entities\VLCollector\VLCollectorPeek.cs" />
+    <Compile Include="Entities\VLCountry.cs" />
+    <Compile Include="Entities\VLCredential.cs" />
+    <Compile Include="Entities\VLEmailTemplate.cs" />
+    <Compile Include="Entities\VLFile.cs" />
+    <Compile Include="Entities\VLLanguage.cs" />
+    <Compile Include="Entities\VLLibraryQuestion\VLLibraryColumn.cs" />
+    <Compile Include="Entities\VLLibraryQuestion\VLLibraryOption.cs" />
+    <Compile Include="Entities\VLLibraryQuestion\VLLibraryQuestion.cs" />
+    <Compile Include="Entities\VLLibraryQuestion\VLLibraryQuestionCategory.cs" />
+    <Compile Include="Entities\VLMessage.cs" />
+    <Compile Include="Entities\VLMessageRecipient.cs" />
+    <Compile Include="Entities\VLObject.cs" />
+    <Compile Include="Entities\VLQuestionColumn.cs" />
+    <Compile Include="Entities\VLQuestionOption.cs" />
+    <Compile Include="Entities\VLQuestionOptionHelper.cs" />
+    <Compile Include="Entities\VLRecipient.cs" />
+    <Compile Include="Entities\VLResponse\VLResponse.cs" />
+    <Compile Include="Entities\VLResponse\VLResponseDetail.cs" />
+    <Compile Include="Entities\VLResponse\VLResponseEx.cs" />
+    <Compile Include="Entities\VLResponse\VLSummary.cs" />
+    <Compile Include="Entities\VLResponse\VLSummaryEx.cs" />
+    <Compile Include="Entities\VLRole.cs" />
+    <Compile Include="Entities\VLRuntimeSession.cs" />
+    <Compile Include="Entities\VLSupportedLanguagesColection.cs" />
+    <Compile Include="Entities\VLSurvey.cs" />
+    <Compile Include="Entities\VLSurveyPage.cs" />
+    <Compile Include="Entities\VLSurveyPageDeleteOptions.cs" />
+    <Compile Include="Entities\VLSurveyQuestion.cs" />
+    <Compile Include="Entities\VLSurveyQuestionDeleteOptions.cs" />
+    <Compile Include="Entities\VLSurveyQuestionEx.cs" />
+    <Compile Include="Entities\VLSurveyTheme.cs" />
+    <Compile Include="Entities\VLSystemEmail.cs" />
+    <Compile Include="Entities\VLSystemParameter.cs" />
+    <Compile Include="Entities\VLSystemUser.cs" />
+    <Compile Include="Entities\VLView\ViewQuestionAttributes.cs" />
+    <Compile Include="Entities\VLView\VLFilterDetail.cs" />
+    <Compile Include="Entities\VLView\VLView.cs" />
+    <Compile Include="Entities\VLView\VLViewCollector.cs" />
+    <Compile Include="Entities\VLView\VLViewFilter.cs" />
+    <Compile Include="Entities\VLView\VLViewPage.cs" />
+    <Compile Include="Entities\VLView\VLViewQuestion.cs" />
+    <Compile Include="Enumerations\ChartAxisScale.cs" />
+    <Compile Include="Enumerations\ChartLabelType.cs" />
+    <Compile Include="Enumerations\ChartType.cs" />
+    <Compile Include="Enumerations\CollectorStatus.cs" />
+    <Compile Include="Enumerations\CollectorType.cs" />
+    <Compile Include="Enumerations\ComparisonOperator.cs" />
+    <Compile Include="Enumerations\CreditType.cs" />
+    <Compile Include="Enumerations\DeleteQuestionsBehavior.cs" />
+    <Compile Include="Enumerations\DeliveryMethod.cs" />
+    <Compile Include="Enumerations\DisqualificationMode.cs" />
+    <Compile Include="Enumerations\EditResponseModes.cs" />
+    <Compile Include="Enumerations\EmailStatus.cs" />
+    <Compile Include="Enumerations\EndSurveyMode.cs" />
+    <Compile Include="Enumerations\EntityState.cs" />
+    <Compile Include="Enumerations\InsertPosition.cs" />
+    <Compile Include="Enumerations\LogicalOperator.cs" />
+    <Compile Include="Enumerations\MessageRecipientStatus.cs" />
+    <Compile Include="Enumerations\MessageStatus.cs" />
+    <Compile Include="Enumerations\OtherFieldType.cs" />
+    <Compile Include="Enumerations\PaymentType.cs" />
+    <Compile Include="Enumerations\PrincipalType.cs" />
+    <Compile Include="Enumerations\ProgressBarPosition.cs" />
+    <Compile Include="Enumerations\QuestionNumberingType.cs" />
+    <Compile Include="Enumerations\QuestionOptionType.cs" />
+    <Compile Include="Enumerations\QuestionType.cs" />
+    <Compile Include="Enumerations\RandomizationMode.cs" />
+    <Compile Include="Enumerations\RecipientSearchField.cs" />
+    <Compile Include="Enumerations\RecipientStatus.cs" />
+    <Compile Include="Enumerations\RequiredHighlightType.cs" />
+    <Compile Include="Enumerations\RequiredMode.cs" />
+    <Compile Include="Enumerations\ResponseTimeOperator.cs" />
+    <Compile Include="Enumerations\ResponseTimeUnit.cs" />
+    <Compile Include="Enumerations\ResponseType.cs" />
+    <Compile Include="Enumerations\RuntimeRequestType.cs" />
+    <Compile Include="Enumerations\SkipToBehavior.cs" />
+    <Compile Include="Enumerations\UserPassword.cs" />
+    <Compile Include="Enumerations\ValidationMode.cs" />
+    <Compile Include="Enumerations\VLFileStatus.cs" />
+    <Compile Include="Enumerations\VLParameterType.cs" />
+    <Compile Include="Enumerations\VLPasswordFormat.cs" />
+    <Compile Include="Enumerations\VLPermissions.cs" />
+    <Compile Include="Enumerations\WebSiteSurveyType.cs" />
+    <Compile Include="Exceptions\VLAccessDeniedException.cs" />
+    <Compile Include="Exceptions\VLDataException.cs" />
+    <Compile Include="Exceptions\VLException.cs" />
+    <Compile Include="Exceptions\VLInvalidAccessTokenException.cs" />
+    <Compile Include="Exceptions\VLInvalidPaymentException.cs" />
+    <Compile Include="Exceptions\VLPaymentException.cs" />
+    <Compile Include="Exceptions\VLSecurityException.cs" />
+    <Compile Include="Export\AllResponsesXlsExport.cs" />
+    <Compile Include="Export\CreateExcelFile.cs" />
+    <Compile Include="Interfaces\IAccessToken.cs" />
+    <Compile Include="Interfaces\IPageRenderer.cs" />
+    <Compile Include="Interfaces\IQuestionRenderer.cs" />
+    <Compile Include="Managers\InternalFileManager.cs" />
+    <Compile Include="Managers\VLLibraryManager.cs" />
+    <Compile Include="Managers\VLManagerBase.cs" />
+    <Compile Include="Managers\VLSurveyManager.cs" />
+    <Compile Include="Managers\VLSystemManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="ValisSystem.cs" />
+    <Compile Include="ViewModel\VLBalance.cs" />
+    <Compile Include="ViewModel\VLCharge.cs" />
+    <Compile Include="ViewModel\VLChargedCollector.cs" />
+    <Compile Include="ViewModel\VLClientDashboard.cs" />
+    <Compile Include="ViewModel\VLClientEx.cs" />
+    <Compile Include="ViewModel\VLClientUserView.cs" />
+    <Compile Include="ViewModel\VLKnownEmailEx.cs" />
+    <Compile Include="ViewModel\VLLogin.cs" />
+    <Compile Include="ViewModel\VLPaymentView1.cs" />
+    <Compile Include="ViewModel\VLSystemDashboard.cs" />
+    <Compile Include="ViewModel\VLSystemUserView.cs" />
+    <Compile Include="WaitHandleCollection.cs" />
+    <Compile Include="Win32ServicesAPI.cs" />
+    <Compile Include="XmlUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

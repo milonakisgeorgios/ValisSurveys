@@ -1,0 +1,418 @@
+﻿/*#region topzone
+----------------------------------------*/
+.topzone {
+    background: -moz-linear-gradient(center top , #555555 0%, #515151 18%, #373737 85%, #333333 100%) repeat scroll 0 0 #333333;
+    box-shadow: 0 0 10px #333333;
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 17px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#top-header {
+    background-color: #3F3F3F;
+    background-image: -moz-linear-gradient(center top , #696969 0%, #3F3F3F 100%);
+    height: 42px;
+    position: relative;
+    z-index: 2;
+}
+.topzone .header-section.first-child
+{
+    float: right;
+    width: auto;
+}
+.topzone .header-section.last-child
+{
+    float: right;
+    width: auto;
+    margin-left: 10px;
+    position: relative;
+}
+span.brandName
+{
+    display: inline-block;
+    padding: 6px 0px 6px 0px;
+    color: #f1f1f1;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0px 20px;
+}
+
+
+.responsive-nav {
+    background-color: #1A1A1A;
+    background-image: -moz-linear-gradient(center top , #1A1A1A 0%, #303030 100%);
+    z-index: 1;
+    height: 38px;
+}
+.responsive-nav .wrapper {
+    position: relative;
+    display: table;
+}
+/*#endregion*/
+
+
+
+/*#region dropmenu
+----------------------------------------*/
+ul.dropmenu {
+	margin: 2px 0px; padding: 1px 0px 0px; height: 34px; font-size: 12px; display: block; position: relative;
+}
+.dropmenu li {
+	margin: 0px; padding: 0px; float: left; position: relative;
+}
+.dropmenu li a {
+	padding: 9px 30px 0px 15px; height: 24px; color: #f1f1f1; border-right-color: #3f3f3f; border-right-width: 1px; border-right-style: solid; display: block;
+}
+.dropmenu li span {
+	background: url("images/arrow_up.png") repeat-x 0px 0px; top: 12px; width: 10px; height: 10px; right: 10px; float: right; display: block; position: absolute;
+}
+.dropmenu li a:hover span {
+	background: url("images/arrow_hover.png") repeat-x 0px 0px;
+}
+.dropmenu li:hover ul {
+	display: block;
+}
+.dropmenu li:hover div {
+	display: block;
+}
+.dropmenu ul {
+	background-color: #1A1A1A; margin: 0px; padding: 0px; width: 140px; border-bottom-color: #3f3f3f; border-bottom-width: 1px; border-bottom-style: solid; display: none; position: absolute;
+}
+.dropmenu ul li {
+	border: 0; border-image: none; float: none;
+}
+.dropmenu ul a {
+	border-width: 1px 1px 0px; border-style: solid solid none; border-color: #999999 #999999 currentColor; border-image: none; color: #f1f1f1; display: block; white-space: nowrap;
+}
+.dropmenu a.selected {
+	color: rgb(255, 255, 255);
+}
+.dropmenu a:hover {
+	color: #f6e312;
+}
+.dropmenu ul a:hover {
+	color: #f6e312 !important;
+}
+.dropmenu div ul {
+	display: block; position: relative;
+}
+.dropmenu ul.left {
+	width: 145px; float: left;
+}
+.dropmenu ul.right {
+	width: 145px; float: right;
+}
+/*#endregion*/
+
+
+
+
+/*#region JQuery Component containers
+-------------------------------------------*/
+.ui-widget 
+{ 
+    font-family: Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif; 
+    font-size: 1.42em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+/*we want a thin blue line around our dialog boxes:*/
+div.ui-dialog 
+{ 
+    border: 1px solid #0072BC;
+    padding: 0px;
+    z-index: 300;
+}
+.ui-widget-overlay
+{
+    z-index: 200;
+}
+.ui-dialog-titlebar
+{
+    background-image: url(images/global-dialog-titlebar.gif);   
+    color: #ffffff;
+    height: 18px;
+    line-height: 18px;
+}
+.theQuestionForm  
+{
+    padding: 0px;
+}
+.questionForm .ui-dialog-titlebar
+{
+    background-image: url(images/btnMain2.gif);   
+}
+.pageForm .ui-dialog-titlebar
+{
+    background-image: url(images/btnMain.gif);   
+}
+
+/* Overlays */
+.ui-widget-overlay {background: url("images/dim.png") repeat scroll 0 0 transparent; opacity: 1;}
+#fuzz{display: none;z-index: 200;}
+
+
+.ui-jqgrid
+{
+    font-size:1em;
+}
+.ui-jqgrid .ui-jqgrid-htable th
+{
+    font-size: 12px;
+    line-height: 2.2em;
+}
+.ui-jqgrid .ui-jqgrid-htable th div
+{
+    height: auto;
+}
+.ui-jqgrid .ui-icon-desc {
+    height: 12px;
+    margin-top: 8px;
+}
+.ui-jqgrid .ui-icon-asc {
+    height: 12px;
+    margin-top: 1px;
+}
+.ui-jqgrid td
+{
+    font-size: 12px;
+    line-height: 2.2em;
+}
+.ui-jqgrid tr.jqgrow td {
+    padding: 0 4px;
+}
+
+
+/*#endregion*/
+
+
+
+/*#region styles for our CommonDialogs:
+-------------------------------------------*/
+.errorIcon { background: url('images/error16.gif'); background-repeat: no-repeat; padding-left: 28px; }
+.informationIcon { background: url('images/information16.gif'); background-repeat: no-repeat; padding-left: 28px; }
+.warningIcon { background: url('images/warning16.gif'); background-repeat: no-repeat; padding-left: 28px; }
+.questionIcon { background: url('images/questionIcon18.png'); background-repeat: no-repeat; padding-left: 28px; background-position: 0px -1px;}
+
+
+span#statusLine {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+div#responseText {
+    margin-top: 6px;
+}
+div.requestWrapper {
+    color: #d81313;
+    background-color: #e8e114;
+    font-size: 1.3em;
+}
+div.errorContainer {
+    margin-top: 12px;
+}
+span.errorText {
+    font-size: 1.2em;
+}
+
+
+div#showErrorBand
+{
+    font-size: 1.4em;
+    padding: .4em 3em .4em 3em;
+    background-color: #e8e114; color: #d81313; border: 1px solid #d81313;
+    text-align:left;
+    position: fixed; top: 80px;
+    width: 100%;
+
+	opacity:0.86;
+    filter:alpha(opacity=86); /* For IE8 and earlier */    
+}
+
+div#showInfoBand
+{
+    font-size: 1.4em;
+    padding: .4em 3em .4em 3em;
+    background-color: #e8e114; color:#272727; border: 1px dashed #5b5b5b;
+    text-align:left;
+    position: fixed; top: 80px;
+    width: 100%;
+
+	opacity:0.86;
+    filter:alpha(opacity=86); /* For IE8 and earlier */    
+}
+div.ErrorMessage {text-align:left;margin:15px 0 15px 0;padding:10px;background:#CC0000;font-weight:bold;color:#fff; font-size:12px;}
+/*#endregion*/
+
+
+
+
+/*#region Our Dialogs/Forms
+-------------------------------------------*/
+div.inputForm
+{
+    position: relative;
+}
+div.inputForm .formWrapper
+{
+    margin: 8px 0px 8px 4px;
+    padding: 2px;
+    font-size: 1.2em;
+}
+div.inputForm .formRow
+{
+    margin: 6px 0px 6px 0px;
+    padding: 4px;
+}
+div.inputForm label
+{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 8px;
+}
+div.inputForm input[type=text], div.inputForm select, div.inputForm textarea
+{
+    min-width: 220px;
+    padding: 3px;
+}
+div.inputForm .formFooter
+{
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+    color: #1388d8;
+}
+/*#endregion*/
+
+
+
+.status-bar
+{
+    display: none;
+    clear: both;
+    position: fixed;
+    top: 80px;
+    font-size: 18px;
+    height: 26px;
+    line-height: 26px;
+    background-color: #b0bf5a;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.content
+{
+    margin-top: 96px;
+    padding: 0px 10px 0px 10px;
+}
+.form-header
+{
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 18px;
+    background-color: #f1f1f1;
+    line-height: 42px;
+    height: 42px;
+    border-bottom: 2px solid #c7c7c7;
+}
+.form-header-title
+{
+    font-size: 2em;
+    display: inline-block;
+    margin-right: 8px;
+}
+a.form-header-link
+{
+    font-size: 11px;
+    color: #555;
+}
+a.form-header-link:hover, a.form-header-link:active,a.form-header-link:visited,a.form-header-link:focus
+{
+    color: #555 !important;
+}
+
+.form-button
+{
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+.form-right-button
+{
+    float: right;
+    margin: 8px 12px;
+}
+
+.aspNetDisabled
+{
+    cursor: default;
+}
+
+.grid-wrapper, .form-wrapper
+{
+    margin: 12px 0px 0px 0px;
+}
+
+.form-line
+{
+    margin-bottom: 8px;
+}
+.form-line label
+{
+    display: inline-block;
+    width: 200px;
+    font-size: 1.1em;
+    vertical-align: top;
+    text-align: left;
+}
+
+.form-wrapper input, .form-wrapper textarea
+{
+    border: 1px solid #999999;
+    padding: 2px;
+    }
+.form-wrapper input[type=checkbox], .form-wrapper input[type=radio]
+{
+    width: auto;
+}
+.form-wrapper textarea
+{
+    width: 260px;
+    }
+
+.under-grid-buttons
+{
+    margin: 12px 0px 0px 0px;
+}
+.under-grid-buttons input[type=button]
+{
+    width: auto;
+    font-size: .92em;
+}
+
+
+p.help{
+    font-size: 11px;
+    padding: 6px 6px 6px 6px;
+    margin: 6px 0px 12px 0px;
+    background-color: #d1d1d1;
+    color: #600078;
+    display: inline-block;
+    max-width: 90%;
+}
+p.notice{
+    font-size: 18px;
+    padding: 6px 6px 6px 6px;
+    margin: 6px 0px 12px 0px;
+    background-color: #d1d1d1;
+    color: #000541;
+    display: inline-block;
+    max-width: 90%;
+}

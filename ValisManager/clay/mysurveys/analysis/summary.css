@@ -1,0 +1,175 @@
+﻿
+div.pageTools {
+    margin: 0px 12px 0px 12px;
+}
+
+div.pageBody {
+    margin: 0px 12px 12px 12px;
+    min-height: 500px;
+}
+
+
+div#summaryReport
+{
+    margin: 48px 0px 0px 0px;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+div.QuestionReport {
+    border: 1px solid #ddd;
+    color: #999;
+    font-family: Arial;
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding: 0;
+    transition: background-color 0.5s ease 0s;
+    width: 652px;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+div.QuestionReport-Header
+{
+    padding: 4px;
+    background-color: #e5e5e3;
+    height: 24px;
+}
+span.QuestionReport-Header-QN
+{
+
+}
+div.QuestionReport-Settings
+{
+    float: right;
+    margin-top: -1px;
+    width: 28px;
+    height: 26px;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.26), 0px 1px 0px 0px rgba(255,255,255,0.15);
+    opacity: 0.7;
+    background-color: #ccc;
+    cursor: pointer;
+}
+div.QuestionReport-Settings img
+{
+    margin: 3px auto 0px 4px;
+}
+
+div.QuestionReport-Body
+{
+    color: #999;
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: height 0.5s ease 0s, min-height 0.5s ease 0s;
+    min-height: 200px;
+}
+.QuestionReport-QTitle
+{
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    margin: 0 auto;
+    width: 420px;
+    word-wrap: break-word;
+    padding: 0;
+    text-align: center;
+}
+.QuestionReport-QSubTitle
+{
+    padding: 0;
+    text-align: center;
+}
+.QuestionReport-QSubTitle span
+{
+    display: inline-block;
+    padding: 4px 6px 0px 
+}
+
+div.QuestionReport-Responses
+{
+    overflow: auto;
+    position: relative;
+    height: 300px;
+    min-height: 300px;
+    margin: 26px auto 18px auto;
+    width: 600px;
+    border-bottom: 1px solid #989898;
+    border-top: 1px solid #989898;
+}
+div.QuestionReport-Responses-Container
+{
+
+}
+
+
+div.Response-Item
+{
+    text-align: left;
+    padding: 2px 2px 4px 2px;
+    border-bottom: 1px solid #ccc;
+    word-wrap: break-word;
+    color: #333;
+}
+div.Response-Item span.Total{
+    display: inline-block;
+    margin: 0px 6px 0px 4px;
+    color: #989898;
+    font-size: 12px;
+}
+div.Response-Item p{
+    font-size: 14px;
+    color: #000;
+    margin: 0px 0px 6px 0px;
+}
+
+
+div.QuestionReport-Q1DChart
+{
+    width: 560px;
+    height: 270px;
+    margin: 18px auto 0 auto;
+}
+div.QuestionReport-Q2DChart
+{
+    width: 560px;
+    margin: 18px auto 0 auto;
+}
+
+div.QuestionReport-QDataTable table
+{
+    margin: 26px auto 18px auto;
+    width: 580px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+}
+
+div.QuestionReport-QDataTable thead 
+{
+    color: #333;
+    cursor: default;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+}
+
+div.QuestionReport-QDataTable th,  div.QuestionReport-QDataTable td
+{
+    padding: 4px;
+}
+div.QuestionReport-QDataTable td
+{
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}

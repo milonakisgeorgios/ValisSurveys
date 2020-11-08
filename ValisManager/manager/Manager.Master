@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="Manager.master.cs" Inherits="ValisManager.manager.Manager" %>
+<%@ Register src="controls/CommonDialogs.ascx" tagname="CommonDialogs" tagprefix="uc1" %>
+<!DOCTYPE html>
+<html lang="el">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title><%=ValisManager.Globals.BrandName %> - Manager</title>
+    <style type="text/css">
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+            border: 0 none;
+            font-family: inherit; font-size: 100%; font-style: inherit; font-weight: inherit;
+            margin: 0; outline: 0 none; padding: 0;
+        }
+        ol, ul { list-style: none outside none; }
+        table { border-collapse: separate; border-spacing: 0; }
+        caption, th, td { font-weight: normal; text-align: left; }
+        blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+        blockquote, q { quotes: "" ""; }
+        input[data-ime-mode-disabled] { ime-mode: disabled !important; }
+        input[type="file"] { ime-mode: disabled !important; }
+        html { overflow-y: scroll; }
+        body {
+            color: #000000;
+            background-color: #FFFFFF;
+            font-family: Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif;
+            font-size: 62.5%;
+            line-height: 1.2;
+            min-width: 1024px;
+        }
+        body, input, select, textarea, button { font-family: Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif; }
+        hr { display: none; }
+        strong { font-weight: bold; }
+        abbr, acronym { border: medium none; }
+        img { border: medium none; }
+        a { color: #006699; text-decoration: none; }
+        a:hover { text-decoration: none; }
+        a:visited, #footer a:visited { color: #006699; }
+        a:focus { outline: thin dotted; }
+        a:active, a:hover { outline: 0 none; }
+        textarea { resize: none; }
+    </style>
+
+    <link href="/External/jquery-ui-1.11.2/smoothness/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/External/jquery.jqGrid-4.6.0/css/ui.jqgrid.css" rel="stylesheet" />
+    <link href="/content/manager.css" rel="stylesheet" />
+    <noscript>
+	    <style type="text/css" media="all">form {display:none;}</style>
+	    <div style="padding: 50px 25%;">
+		    <div class="ErrorMessage">
+			    Javascript is required for this site to function, please enable.
+		    </div>
+	    </div>
+    </noscript>
+    <script src="/scripts/jquery-2.1.1.min.js"></script>
+    <script src="/scripts/jquery.cookie.js"></script>
+    <script src="/scripts/jquery.ui.touch-punch.min.js"></script>
+    <script src="/External/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+    <script src="/External/jquery.jqGrid-4.6.0/js/i18n/grid.locale-en.js"></script>
+    <script src="/External/jquery.jqGrid-4.6.0/js/jquery.jqGrid.min.js"></script>
+    <script src="/scripts/dropmenu.js"></script>
+    <script src="/scripts/support.js"></script>
+    <script>
+        $(function () {
+            $("#menu").dropmenu();
+        });
+
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="theForm" runat="server">
+    <div class="master-wrapper-content">
+        <div id="header" class="topzone">
+            <div id="top-header">
+                
+                <div class="wrapper">
+                    <div style="position: absolute; top: 6px; left: 6px;">
+                        <img src="/content/images/logo.png" style="width:142px;"/>
+                    </div>    
+                    <div class="header-section first-child">
+                        <span class="brandName"><%: ValisManager.Globals.UserToken.LastName %>, <%: ValisManager.Globals.UserToken.FirstName %></span>
+                    </div>
+                    <div class="header-section last-child">
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="top-menu" class="responsive-nav" style="position: static; width: auto;">
+                <div class="wrapper">
+                    <ul id="menu" class="dropmenu" style="margin-left: 154px;">
+                        <li><a href="/manager/home.aspx">Dashboard</a></li>
+                        <li><a href="#">Customers</a>
+                            <ul>
+                                <li><a href="/manager/clientprofiles/list.aspx">Profiles</a></li>
+                                <li><a href="/manager/customers/list.aspx">Customers</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Libraries</a>
+                            <ul>
+                                <li><a href="/manager/libraries/questions/list.aspx">Questions</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Emails</a>
+                            <ul>
+                                <li><a href="/manager/emails/templates/list.aspx">Templates</a></li>
+                                <li><a href="/manager/emails/knownemails/list.aspx">KnownEmails</a></li>
+                                <li><a href="/manager/emails/systememails/list.aspx">SystemEmails</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">System</a>
+                            <ul>
+                                <li><a href="/manager/system/languages/list.aspx">Languages</a></li>
+                                <li><a href="/manager/system/countries/list.aspx">Countries</a></li>
+                                <li><a href="/manager/system/parameters/list.aspx">Parameters</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Security</a>
+                            <ul>
+                                <li><a href="/manager/security/roles/list.aspx">Roles</a></li>
+                                <li><a href="/manager/security/users/list.aspx">Users</a></li>
+                                <li><a href="/manager/security/logins/list.aspx">Logins</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/logoff.aspx">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="status-bar">
+            #status
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+    <uc1:CommonDialogs ID="CommonDialogs1" runat="server" />
+</body>
+</html>

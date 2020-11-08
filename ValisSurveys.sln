@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valis.Core", "Valis.Core\Valis.Core.csproj", "{CEB280C4-5D7C-4C89-BD9B-18B405DF026B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valis.Core.HtmlRenderers", "Valis.Core.HtmlRenderers\Valis.Core.HtmlRenderers.csproj", "{905974BD-02DC-474D-8301-8B05AD25043F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valis.Core.SqlServer", "Valis.Core.SqlServer\Valis.Core.SqlServer.csproj", "{06F7BC6C-7841-4CB7-9E31-B10525A27E62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valis.Core.UnitTests", "Valis.Core.UnitTests\Valis.Core.UnitTests.csproj", "{B6441A66-FA2D-4B0C-842F-7FD831D21C74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValisManager", "ValisManager\ValisManager.csproj", "{26A11622-9AB3-4B02-B5F0-6F67A4544BE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseScripts", "DatabaseScripts", "{7027F59C-40D1-4F8F-BBE9-DE64C1BF70D0}"
+	ProjectSection(SolutionItems) = preProject
+		DatabaseScripts\ValisSurveys_01_schema.sql = DatabaseScripts\ValisSurveys_01_schema.sql
+		DatabaseScripts\ValisSurveys_02_initialization.sql = DatabaseScripts\ValisSurveys_02_initialization.sql
+		DatabaseScripts\ValisSurveys_03_QuestionBank.sql = DatabaseScripts\ValisSurveys_03_QuestionBank.sql
+		DatabaseScripts\ValisSurveys_04_EmailTemplates.sql = DatabaseScripts\ValisSurveys_04_EmailTemplates.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValisServer", "ValisServer\ValisServer.csproj", "{67FD3477-D04F-4CEB-9B82-494704F660BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValisApplicationService", "ValisApplicationService\ValisApplicationService.csproj", "{34F5FE29-189A-4B67-8518-89B07BA103D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValisReporter", "ValisReporter\ValisReporter.csproj", "{B8880EDE-BC44-4DDF-A94F-5DAC35D5EE79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEB280C4-5D7C-4C89-BD9B-18B405DF026B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB280C4-5D7C-4C89-BD9B-18B405DF026B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB280C4-5D7C-4C89-BD9B-18B405DF026B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB280C4-5D7C-4C89-BD9B-18B405DF026B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{905974BD-02DC-474D-8301-8B05AD25043F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905974BD-02DC-474D-8301-8B05AD25043F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905974BD-02DC-474D-8301-8B05AD25043F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905974BD-02DC-474D-8301-8B05AD25043F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F7BC6C-7841-4CB7-9E31-B10525A27E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F7BC6C-7841-4CB7-9E31-B10525A27E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F7BC6C-7841-4CB7-9E31-B10525A27E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F7BC6C-7841-4CB7-9E31-B10525A27E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6441A66-FA2D-4B0C-842F-7FD831D21C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6441A66-FA2D-4B0C-842F-7FD831D21C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6441A66-FA2D-4B0C-842F-7FD831D21C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6441A66-FA2D-4B0C-842F-7FD831D21C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26A11622-9AB3-4B02-B5F0-6F67A4544BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A11622-9AB3-4B02-B5F0-6F67A4544BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A11622-9AB3-4B02-B5F0-6F67A4544BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A11622-9AB3-4B02-B5F0-6F67A4544BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FD3477-D04F-4CEB-9B82-494704F660BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FD3477-D04F-4CEB-9B82-494704F660BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FD3477-D04F-4CEB-9B82-494704F660BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FD3477-D04F-4CEB-9B82-494704F660BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F5FE29-189A-4B67-8518-89B07BA103D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F5FE29-189A-4B67-8518-89B07BA103D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F5FE29-189A-4B67-8518-89B07BA103D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F5FE29-189A-4B67-8518-89B07BA103D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8880EDE-BC44-4DDF-A94F-5DAC35D5EE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8880EDE-BC44-4DDF-A94F-5DAC35D5EE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8880EDE-BC44-4DDF-A94F-5DAC35D5EE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8880EDE-BC44-4DDF-A94F-5DAC35D5EE79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {642019D7-1CEE-421C-A2A1-AFA1021267CE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{905974BD-02DC-474D-8301-8B05AD25043F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Valis.Core.Html</RootNamespace>
+    <AssemblyName>Valis.Core.HtmlRenderers</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clay\CompositeRenderer.cs" />
+    <Compile Include="Clay\DateRenderer.cs" />
+    <Compile Include="Clay\DecimalRenderer.cs" />
+    <Compile Include="Clay\DefaultRenderer.cs" />
+    <Compile Include="Clay\DescriptiveTextRenderer.cs" />
+    <Compile Include="Clay\DropDownRenderer.cs" />
+    <Compile Include="Clay\IntegerRenderer.cs" />
+    <Compile Include="Clay\ManyFromManyRenderer.cs" />
+    <Compile Include="Clay\MatrixManyPerRowRenderer.cs" />
+    <Compile Include="Clay\MatrixOnePerRowRenderer.cs" />
+    <Compile Include="Clay\MultipleLineRenderer.cs" />
+    <Compile Include="Clay\OneFromManyRenderer.cs" />
+    <Compile Include="Clay\OptionalInputBoxSupport.cs" />
+    <Compile Include="Clay\RangeRenderer.cs" />
+    <Compile Include="WebControls\NewDropDownList.cs" />
+    <Compile Include="QuestionRenderer.cs" />
+    <Compile Include="Clay\SingleLineRenderer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HtmlRenderers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Valis.Core\Valis.Core.csproj">
+      <Project>{ceb280c4-5d7c-4c89-bd9b-18b405df026b}</Project>
+      <Name>Valis.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
