@@ -29,7 +29,7 @@ This is the "RuntimeEngine" af the system. It has the purpose to render the surv
 3. __ValisApplicationService__
 This is a windows service with the main responsibility to send the invitations (email) and all the other system emails (validations, subscrive, unsuscribe etc.). At the time I used the SendGrid service.
 4. __ValisReporter__
-This is the "ReportEngine" (analysis and report tool) for the survey's responses. It uses the excellent HighCharts to show the results for every questions (pies and barcharts) and the phantomjs to produce a pdf report.
+This is the "ReportEngine" (analysis and report tool) for the survey's responses. It uses the excellent [HighCharts](https://www.highcharts.com/) to show the results for every questions (pies and barcharts) and the [phantomjs](https://phantomjs.org/) to produce a pdf report.
 
 ## Setup
 1. Create an empty SQL Server database with the name ValisSurveys. Run the scipts inside the folder DatabaseScripts in the order of their numbering.
@@ -43,6 +43,7 @@ This is the "ReportEngine" (analysis and report tool) for the survey's responses
   
 7. Be Careful. Only the  ValisManager is desinged to be used by the end users. The ValisServer and the ValisReporter are being called from the ValisManager or the invitation you send in order to collect responses to a survey. In order to view/test the whole sysem, the ValisServer and the ValisReporter must be running and their urls must be hardwritten in the web.configs. The corresponding settings are  <RuntimeEngine> and the <ReportEngine> inside the <valisSystem> section.
 6. Login in the ValisManager, create a client using the demo-payment-profile (the easiest) and create a user. Then login as this user. Now you can create surveys, preview these surveys, contacts, etc..
+8. Don't forget to check the license model for [HighCharts](https://www.highcharts.com/) as it is not a free javascript charts library.
 
 
 ## Synopsis
