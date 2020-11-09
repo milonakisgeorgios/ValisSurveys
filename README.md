@@ -36,12 +36,12 @@ This is the "ReportEngine" (analysis and report tool) for the survey's responses
 3. Open the three (3) Web.config and the one (1) App.config and change under <valisSystem> section the settings for the Database connection. Also change the FileInventory setting to show to the folder youcreated for the system's file. Same way change  the file setting for the log4Net.
 4. Now you can run the UnitTests. The Unit Tests do not use mockup etc. They are more "integration tests" They hit the real database and they wait a clean system as it is after step 1!. Always if you want to run the UnitTests you must do it on a clean database.
 5. After step 1 in the system there are the following accounts for your adnimistrators:
-  1. user: sysadmin pass:tolk!3n
-  2. user: developer pass:tolk!3n
-  3. usewr: admin pass: tolk!3n
+    1. user: sysadmin pass:tolk!3n
+    2. user: developer pass:tolk!3n
+    3. usewr: admin pass: tolk!3n
   
-7. Be Careful. Only the  ValisManager is desinged to be used by the end users. The ValisServer and the ValisReporter are being called from the ValisManager or the invitation you send in order to collect responses to a survey. In order to view/test the whole sysem, the ValisServer and the ValisReporter must be running and their urls must be hardwritten in the web.configs. The corresponding settings are  <RuntimeEngine> and the <ReportEngine> inside the <valisSystem> section.
-6. Login in the ValisManager, create a client using the demo-payment-profile (the easiest) and create a user. Then login as this user. Now you can create surveys, preview these surveys, contacts, etc..
+6. Be Careful. Only the  ValisManager is desinged to be used by the end users. The ValisServer and the ValisReporter are being called from the ValisManager or the invitation you send in order to collect responses to a survey. In order to view/test the whole sysem, the ValisServer and the ValisReporter must be running and their urls must be hardwritten in the web.configs. The corresponding settings are  <RuntimeEngine> and the <ReportEngine> inside the <valisSystem> section.
+7. Login in the ValisManager, create a client using the demo-payment-profile (the easiest) and create a user. Then login as this user. Now you can create surveys, preview these surveys, contacts, etc..
 8. Don't forget to check the license model for [HighCharts](https://www.highcharts.com/) as it is not a free javascript charts library.
 
 
