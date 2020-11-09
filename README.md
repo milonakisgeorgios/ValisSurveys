@@ -1,8 +1,6 @@
 # ValisSurveys
 An ASP.NET (WebForms) survey system (working prototype).
-This was a project for a client of mine arround year 2014. But the project canceled never went to production and abandoned. 
-At the time I studied how SurveyMonkey and LimeSurvey were working and what were their mechanics (functionally wise). I borrowed from them the knowledge of the business domain. The system was near to complete its first version before the cancelation. 
-I uploaded here today the solution, primarily as an educational resource. I revive it in order to be compiled under Visual Studio 2019 and upgraded it for .Net Framework 4.8. The databases scripts and the store procedures where developed for SQL Serve 2012. It runs perfectly on Firefox Browser and Google Chrome.
+This project was developed in 2014 for a client of mine, but was later cancelled and never made it to production. At the time I was developing ValisSurveys I studied how SurveyMonkey and LimeSurvey worked, their mechanics and functionality. I borrowed from the two systems the knowledge of the business domain. The system was near its completion for the first release before cancellation. I have uploaded the solution, primarily as an education resource. I revived it in order to compile for Visual Studio 2019 and upgraded it to .NET Framework 4.8. The database scripts and stored procedures were developed for SQL Server 2012.  It runs perfectly on Firefox Browser and Google Chrome.
 
 It supports plain surveys and surveys with branching logic. Each survey can have from one to multiple pages and each page can have one or more questions. A question can be any of the following types:
 
